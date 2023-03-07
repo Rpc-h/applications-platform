@@ -1,0 +1,91 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: authelia
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://charts.authelia.com
+    targetRevision: "0.8.53"
+    chart: authelia
+    plugin:
+      env:
+        - name: HELM_VALUES
+          value: |
+            ingress:
+              enabled: true
+              annotations:
+                traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                cert-manager.io/cluster-issuer: rpch-tech
+              subdomain: authelia
+              tls:
+                secret: authelia-cert
+            #Mounting the user_database.yaml file as it does not come by default
+            pod:
+              kind: StatefulSet
+              extraVolumeMounts:
+                - name: authelia-users
+                  mountPath: /config/users_database.yaml
+                  subPath: users_database.yaml
+                  #This file should be set with read/write permissions as it could be updated by users resetting their passwords.
+                  readOnly: false
+              extraVolumes:
+                - name: authelia-users
+                  secret:
+                    secretName: authelia-users
+                    items:
+                      - key: users_database.yaml
+                        path: users_database.yaml
+            #Support protection of multiple root domains isn't possible today, the cookie and all the respective configuration is tied to a single root domain.
+            #See this: https://github.com/authelia/authelia/issues/1198
+            domain: ARGOCD_ENV_DOMAIN
+            configMap:
+              notifier:
+                filesystem:
+                  enabled: true
+                smtp:
+                  enabled: false
+              storage:
+                local:
+                  enabled: true
+                postgres:
+                  enabled: false
+              session:
+                expiration: 1w
+                inactivity: 24h
+                redis:
+                  enabled: false
+              authentication_backend:
+                ldap:
+                  enabled: false
+                file:
+                  enabled: true
+                  path: /config/users_database.yaml
+                  password:
+                    algorithm: argon2
+                    argon2:
+                      variant: argon2id
+                      iterations: 3
+                      memory: 65536
+                      parallelism: 4
+                      key_length: 32
+                      salt_length: 16
+              access_control:
+                default_policy: deny
+                rules:
+                 - domain: "*.ARGOCD_ENV_DOMAIN"
+                   policy: one_factor
+                   subject:
+                   - "group:admins"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: authelia
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true

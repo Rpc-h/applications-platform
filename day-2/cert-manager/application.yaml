@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://charts.jetstack.io
+    targetRevision: "v1.11.0"
+    chart: cert-manager
+    plugin:
+      env:
+        - name: HELM_VALUES
+          value: |
+            installCRDs: true
+            serviceAccount:
+              annotations:
+                iam.gke.io/gcp-service-account: ARGOCD_ENV_CLUSTER_NAME-cert-manager@ARGOCD_ENV_GOOGLE_PROJECT.iam.gserviceaccount.com
+            securityContext:
+              fsGroup: 1001
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cert-manager
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true

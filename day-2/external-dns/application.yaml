@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-dns
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://kubernetes-sigs.github.io/external-dns
+    targetRevision: 1.12.1
+    chart: external-dns
+    plugin:
+      env:
+        - name: HELM_VALUES
+          value: |
+            provider: google
+            serviceAccount:
+              annotations:
+                iam.gke.io/gcp-service-account: ARGOCD_ENV_CLUSTER_NAME-external-dns@ARGOCD_ENV_GOOGLE_PROJECT.iam.gserviceaccount.com
+            logLevel: info
+            policy: sync
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: external-dns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true

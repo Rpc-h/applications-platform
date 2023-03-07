@@ -1,0 +1,53 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: traefik
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://helm.traefik.io/traefik
+    targetRevision: "20.8.0"
+    chart: traefik
+    plugin:
+      env:
+        - name: HELM_VALUES
+          value: |
+            #Do not use the IngressRoute CR for ingress
+            ingressRoute:
+              dashboard:
+                enabled: true
+            service:
+              #The type must be LoadBalancer!
+              type: LoadBalancer
+            #I need this for external-dns to create records from ingress rules
+            providers:
+              kubernetesIngress:
+                enabled: true
+                publishedService:
+                  enabled: true
+            ports:
+              web:
+                port: 8000
+                expose: true
+                exposedPort: 80
+                protocol: TCP
+                redirectTo: websecure
+              websecure:
+                port: 8443
+                expose: true
+                exposedPort: 443
+                protocol: TCP
+                tls:
+                  enabled: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: traefik
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true

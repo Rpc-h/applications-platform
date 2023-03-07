@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-production
+  namespace: argocd
+spec:
+  project: default
+  source:
+    #TODO - do not hardcode
+    repoURL: https://github.com/Rpc-h/argocd-applications
+    targetRevision: main
+    path: /
+    plugin:
+      env:
+        - name: "DIRECTORY_RECURSE"
+          value: "true"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true

@@ -1,0 +1,59 @@
+name: day-0-destroy
+
+on: workflow_dispatch
+
+jobs:
+  day-0-destroy-plan:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    container:
+      #TODO - move the creation of the image to a repo
+      image: sitilge/gcp-terraform:9ad90af0
+    steps:
+      - name: Checkout the code
+        id: checkout-code
+        uses: actions/checkout@v3
+      - name: Initialize and plan Terraform resources
+        id: initialize-and-plan
+        run: |
+          source .env
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 -d > /tmp/credentials.json
+          export GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
+          export TF_VAR_google_project="${{ secrets.GOOGLE_PROJECT }}"
+          export TF_VAR_google_region="${{ secrets.GOOGLE_REGION }}"
+          cd day-0
+          terraform init -backend-config="bucket=${{ secrets.GOOGLE_BUCKET }}"
+          terraform plan -destroy -out=tfplan-destroy
+      - name: Upload Terraform plan file
+        id: upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: day-0-tfplan-destroy
+          path: day-0/tfplan-destroy
+  day-0-destroy:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    container:
+      #TODO - move the creation of the image to a repo
+      image: sitilge/gcp-terraform:9ad90af0
+    needs: day-0-destroy-plan
+    steps:
+      - name: Checkout the code
+        id: checkout-code
+        uses: actions/checkout@v3
+      - name: Download Terraform plan file
+        id: download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: day-0-tfplan-destroy
+      - name: Initialize and destroy Terraform resources
+        id: initialize-and-destroy
+        run: |
+          source .env
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 -d > /tmp/credentials.json
+          export GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
+          export TF_VAR_google_project="${{ secrets.GOOGLE_PROJECT }}"
+          export TF_VAR_google_region="${{ secrets.GOOGLE_REGION }}"
+          cd day-0
+          terraform init -backend-config="bucket=${{ secrets.GOOGLE_BUCKET }}"
+          terraform apply ${{ steps.download-artifact.outputs.download-path }}/tfplan-destroy

@@ -1,0 +1,39 @@
+server:
+  ingress:
+    enabled: true
+    annotations:
+      traefik.ingress.kubernetes.io/router.entrypoints: websecure
+      traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
+      cert-manager.io/cluster-issuer: rpch-tech
+    path: /
+    tls:
+      - secretName: argocd-cert
+  extraArgs:
+    - --insecure #This is required otherwise I am getting redirect loops
+dex:
+  enabled: false
+repoServer:
+  extraContainers:
+    - name: argocd-sugar
+      command: ["/var/run/argocd/argocd-cmp-server"]
+      args: ["--loglevel=debug"]
+      image: sitilge/argocd-sugar:f40ad519
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+      envFrom:
+        - secretRef:
+            #argocd-sugar is a secret created in day-1 with some variables
+            name: argocd-sugar
+      volumeMounts:
+        - mountPath: /var/run/argocd
+          name: var-files
+        - mountPath: /home/argocd/cmp-server/plugins
+          name: plugins
+        # Starting with v2.4, do NOT mount the same tmp volume as the repo-server container. The filesystem separation helps
+        # mitigate path traversal attacks.
+        - mountPath: /tmp
+          name: cmp-tmp
+  volumes:
+    - emptyDir: {}
+      name: cmp-tmp

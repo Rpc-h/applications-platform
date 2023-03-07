@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+#TODO - maybe switch to just issuer?
+kind: ClusterIssuer
+metadata:
+  name: rpch-tech
+  namespace: cert-manager
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  acme:
+    privateKeySecretRef:
+      name: rpch-tech
+    #   For production use this server: https://acme-v02.api.letsencrypt.org/directory
+    #   For staging use this server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    solvers:
+      - dns01:
+          cloudDNS:
+            project: ARGOCD_ENV_GOOGLE_PROJECT
