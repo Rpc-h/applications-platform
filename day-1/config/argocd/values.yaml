@@ -5,7 +5,7 @@ server:
     annotations:
       traefik.ingress.kubernetes.io/router.entrypoints: websecure
       traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
-      cert-manager.io/cluster-issuer: rpch-tech
+      cert-manager.io/cluster-issuer: production
     path: /
     tls:
       - secretName: argocd-cert

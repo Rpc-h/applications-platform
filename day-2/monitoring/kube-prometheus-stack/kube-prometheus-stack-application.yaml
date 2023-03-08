@@ -1,0 +1,125 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-prometheus-stack
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://prometheus-community.github.io/helm-charts
+    targetRevision: "45.7.1"
+    chart: kube-prometheus-stack
+    plugin:
+      env:
+        - name: HELM_VALUES
+          value: |
+            kubeProxy:
+              enabled: false
+            kubeScheduler:
+              enabled: false
+            kubeControllerManager:
+              enabled: false
+            alertmanager:
+              enabled: true
+              ingress:
+                enabled: true
+                annotations:
+                  traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                  traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
+                  cert-manager.io/cluster-issuer: production
+                hosts:
+                  - alertmanager.ARGOCD_ENV_DOMAIN
+                path: /
+                tls:
+                  - secretName: alertmanager-cert
+                    hosts:
+                      - alertmanager.ARGOCD_ENV_DOMAIN
+              config:
+                route:
+                  receiver: "null"
+                  group_wait: 30s
+                  group_interval: 5m
+                  repeat_interval: 1h
+                  group_by: [alertname, severity, id]
+                  routes:
+                    - receiver: "null"
+                      match:
+                        severity: null
+                      continue: false
+                    - receiver: "info"
+                      match:
+                        severity: info
+                    - receiver: "warning"
+                      match:
+                        severity: warning
+                    - receiver: "critical"
+                      match:
+                        severity: critical
+                receivers:
+                  - name: "null"
+                  - name: "info"
+                  - name: "warning"
+                  - name: "critical"
+            kubeStateMetrics:
+              enabled: true
+            nodeExporter:
+              enabled: true
+            prometheus:
+              enabled: true
+              ingress:
+                enabled: true
+                annotations:
+                  traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                  traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
+                  cert-manager.io/cluster-issuer: production
+                hosts:
+                  - prometheus.ARGOCD_ENV_DOMAIN
+                path: /
+                tls:
+                  - secretName: prometheus-cert
+                    hosts:
+                      - prometheus.ARGOCD_ENV_DOMAIN
+              prometheusSpec:
+                retention: "24h"
+                storageSpec:
+                  volumeClaimTemplate:
+                    spec:
+                      storageClassName: main
+                      resources:
+                        requests:
+                          storage: 10Gi
+            grafana:
+              enabled: true
+              replicas: 1
+              adminPassword: ARGOCD_ENV_RANDOM_STRING
+              persistence:
+                enabled: true
+                storageClassName: main
+                size: 1Gi
+              grafana.ini:
+                server:
+                  root_url: https://grafana.ARGOCD_ENV_DOMAIN
+              ingress:
+                enabled: true
+                annotations:
+                  traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                  cert-manager.io/cluster-issuer: production
+                hosts:
+                  - grafana.ARGOCD_ENV_DOMAIN
+                path: /
+                tls:
+                  - secretName: grafana-cert
+                    hosts:
+                      - grafana.ARGOCD_ENV_DOMAIN
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+      - ServerSideApply=true

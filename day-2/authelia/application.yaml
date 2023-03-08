@@ -18,7 +18,7 @@ spec:
               className: traefik
               annotations:
                 traefik.ingress.kubernetes.io/router.entrypoints: websecure
-                cert-manager.io/cluster-issuer: rpch-tech
+                cert-manager.io/cluster-issuer: production
               subdomain: authelia
               tls:
                 secret: authelia-cert
