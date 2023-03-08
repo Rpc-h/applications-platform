@@ -23,6 +23,7 @@ spec:
               enabled: true
               ingress:
                 enabled: true
+                ingressClassName: traefik
                 annotations:
                   traefik.ingress.kubernetes.io/router.entrypoints: websecure
                   traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
@@ -34,6 +35,8 @@ spec:
                   - secretName: alertmanager-cert
                     hosts:
                       - alertmanager.ARGOCD_ENV_DOMAIN
+              alertmanagerSpec:
+                configSecret: telegram
               config:
                 route:
                   receiver: "null"
@@ -68,6 +71,7 @@ spec:
               enabled: true
               ingress:
                 enabled: true
+                ingressClassName: traefik
                 annotations:
                   traefik.ingress.kubernetes.io/router.entrypoints: websecure
                   traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
@@ -90,7 +94,6 @@ spec:
                           storage: 10Gi
             grafana:
               enabled: true
-              replicas: 1
               adminPassword: ARGOCD_ENV_RANDOM_STRING
               persistence:
                 enabled: true
@@ -101,6 +104,7 @@ spec:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
               ingress:
                 enabled: true
+                ingressClassName: traefik
                 annotations:
                   traefik.ingress.kubernetes.io/router.entrypoints: websecure
                   cert-manager.io/cluster-issuer: production
