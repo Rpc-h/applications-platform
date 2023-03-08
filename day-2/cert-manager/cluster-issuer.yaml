@@ -12,7 +12,7 @@ spec:
       name: rpch-tech
     #   For production use this server: https://acme-v02.api.letsencrypt.org/directory
     #   For staging use this server: https://acme-staging-v02.api.letsencrypt.org/directory
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
       - dns01:
           cloudDNS:

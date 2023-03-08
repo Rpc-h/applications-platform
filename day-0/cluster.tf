@@ -64,7 +64,8 @@ resource "google_container_cluster" "main" {
   cost_management_config {
     enabled = true
   }
-  #  Enable if you want to have metrics + logs on GCP
+
+  #Enable if you want to have metrics + logs on GCP
   #  logging_config {
   #    enable_components = [
   #      "SYSTEM_COMPONENTS",
@@ -84,7 +85,6 @@ resource "google_container_cluster" "main" {
   #  }
 }
 
-#TODO - add SSH keys to nodes
 resource "google_container_node_pool" "main" {
   name       = var.name
   location   = var.google_region

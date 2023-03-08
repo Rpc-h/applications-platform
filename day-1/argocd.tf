@@ -2,6 +2,10 @@ resource "kubernetes_namespace" "argocd" {
   metadata {
     name = "argocd"
   }
+
+  depends_on = [
+    kubernetes_storage_class.main
+  ]
 }
 
 resource "random_password" "main" {
@@ -36,7 +40,7 @@ resource "helm_release" "argocd" {
   namespace        = "argocd"
   repository       = "https://argoproj.github.io/argo-helm"
   chart            = "argo-cd"
-  version          = "5.20.1"
+  version          = "5.21.0"
   create_namespace = true
   atomic           = true
   cleanup_on_fail  = true

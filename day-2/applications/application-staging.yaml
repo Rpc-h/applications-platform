@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     #TODO - do not hardcode
-    repoURL: https://github.com/Rpc-h/argocd-applications
+    repoURL: https://github.com/Rpc-h/applications
     targetRevision: staging
     path: /
     plugin:
