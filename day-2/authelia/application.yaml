@@ -19,6 +19,7 @@ spec:
               annotations:
                 traefik.ingress.kubernetes.io/router.entrypoints: websecure
                 cert-manager.io/cluster-issuer: rpch-tech
+                test: abc
               subdomain: authelia
               tls:
                 secret: authelia-cert
