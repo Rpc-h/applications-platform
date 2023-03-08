@@ -35,8 +35,6 @@ spec:
                   - secretName: alertmanager-cert
                     hosts:
                       - alertmanager.ARGOCD_ENV_DOMAIN
-              alertmanagerSpec:
-                configSecret: telegram
               config:
                 route:
                   receiver: "null"
@@ -61,8 +59,23 @@ spec:
                 receivers:
                   - name: "null"
                   - name: "info"
+                    telegramConfigs:
+                      - botToken:
+                          name: telegram
+                          key: token
+                        chatID: -829761903
                   - name: "warning"
+                    telegramConfigs:
+                      - botToken:
+                          name: telegram
+                          key: token
+                        chatID: -829761903
                   - name: "critical"
+                    telegramConfigs:
+                      - botToken:
+                          name: telegram
+                          key: token
+                        chatID: -829761903
             kubeStateMetrics:
               enabled: true
             nodeExporter:
