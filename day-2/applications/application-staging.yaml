@@ -9,7 +9,7 @@ spec:
     #TODO - do not hardcode
     repoURL: https://github.com/Rpc-h/applications
     targetRevision: staging
-    path: /
+    path: .
     plugin:
       env:
         - name: "DIRECTORY_RECURSE"
