@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 #TODO - maybe switch to just issuer?
 kind: ClusterIssuer
 metadata:
-  name: rpch-tech
+  name: production
   namespace: cert-manager
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

@@ -162,6 +162,7 @@ cat /tmp/${SECRET_NAME}.yaml | kubeseal --controller-namespace sealed-secrets --
 ```
 
 # TODOs
+- Describe relationship between day-1 ArgoCD and day-2 apps such as external DNS and cert-manager
 - Github pipelines to cache TF providers.
 - In the future, think more about keeping pipelines DRY.
 - Have more complex comments for each step in a job, where required.
