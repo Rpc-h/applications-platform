@@ -1,6 +1,7 @@
 server:
   ingress:
     enabled: true
+    ingressClassName: traefik
     annotations:
       traefik.ingress.kubernetes.io/router.entrypoints: websecure
       traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd

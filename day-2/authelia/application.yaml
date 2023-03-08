@@ -15,6 +15,7 @@ spec:
           value: |
             ingress:
               enabled: true
+              className: traefik
               annotations:
                 traefik.ingress.kubernetes.io/router.entrypoints: websecure
                 cert-manager.io/cluster-issuer: rpch-tech
