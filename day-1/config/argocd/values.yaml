@@ -18,7 +18,7 @@ repoServer:
     - name: argocd-sugar
       command: ["/var/run/argocd/argocd-cmp-server"]
       args: ["--loglevel=debug"]
-      image: sitilge/argocd-sugar:bbd75d92
+      image: sitilge/argocd-sugar:839ef82b
       securityContext:
         runAsNonRoot: true
         runAsUser: 999
