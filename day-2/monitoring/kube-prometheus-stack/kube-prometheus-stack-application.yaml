@@ -59,23 +59,14 @@ spec:
                 receivers:
                   - name: "null"
                   - name: "info"
-                    telegramConfigs:
-                      - botToken:
-                          name: telegram
-                          key: token
-                        chatID: -829761903
+                    webhook_configs:
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21DaMkbMrexCDEDGoiup:hoprnet.io"
                   - name: "warning"
-                    telegramConfigs:
-                      - botToken:
-                          name: telegram
-                          key: token
-                        chatID: -829761903
+                    webhook_configs:
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21WxXYnjzPyglBADfuyc:hoprnet.io"
                   - name: "critical"
-                    telegramConfigs:
-                      - botToken:
-                          name: telegram
-                          key: token
-                        chatID: -829761903
+                    webhook_configs:
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21HgRjXaMRVLzZYZPEFg:hoprnet.io"
             kubeStateMetrics:
               enabled: true
             nodeExporter:
