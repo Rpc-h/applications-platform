@@ -13,8 +13,12 @@ spec:
       env:
         - name: HELM_VALUES
           value: |
-            kubeProxy:
+            coreDns:
               enabled: false
+            kubeDns:
+              enabled: true
+            kubeProxy:
+              enabled: true
             kubeScheduler:
               enabled: false
             kubeControllerManager:
