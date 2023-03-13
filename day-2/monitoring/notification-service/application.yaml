@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sitilge/notification-service
-    targetRevision: master
-    path: deploy/charts/abc
+    repoURL: https://github.com/hoprnet/notification-service
+    targetRevision: preinstalled-dependencies
+    path: deploy/charts
     plugin:
       env:
         - name: HELM_VALUES
