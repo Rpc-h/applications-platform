@@ -18,7 +18,7 @@ spec:
             kubeDns:
               enabled: true
             kubeProxy:
-              enabled: true
+              enabled: false
             kubeScheduler:
               enabled: false
             kubeControllerManager:
