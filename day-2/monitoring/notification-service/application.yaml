@@ -13,6 +13,8 @@ spec:
       env:
         - name: HELM_VALUES
           value: |
+            matrix:
+              apiToken: "abc123"
             extraEnvVarsSecret: notification-service
   destination:
     server: https://kubernetes.default.svc
