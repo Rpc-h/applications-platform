@@ -92,7 +92,7 @@ spec:
                     hosts:
                       - prometheus.ARGOCD_ENV_DOMAIN
               prometheusSpec:
-                retention: "24h"
+                serviceMonitorSelectorNilUsesHelmValues: false
                 storageSpec:
                   volumeClaimTemplate:
                     spec:
