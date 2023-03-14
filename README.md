@@ -141,7 +141,15 @@ docker run authelia/authelia:latest authelia crypto hash generate argon2 --passw
 To retrieve ArgoCD password run: 
 
 ```shell
-kubectl -n argocd get secrets argocd-initial-admin-secret --template {{.data.password}} | base64 -d
+kubectl -n argocd get secrets argocd-initial-admin-secret -o yaml | yq -r '.data["password"]' | base64 -d
+```
+
+### Grafana
+
+To retrieve Grafana password run:
+
+```shell
+kubectl -n monitoring get secrets kube-prometheus-stack-grafana -o yaml | yq -r '.data["admin-password"]' | base64 -d
 ```
 
 ### Sealed Secrets
