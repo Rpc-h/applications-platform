@@ -8,6 +8,6 @@ metadata:
 spec:
   rateLimit:
     #actual rate = average / period
-    average: 2
+    average: 10
     period: 1
-    burst: 1
+    burst: 5
