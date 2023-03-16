@@ -123,6 +123,19 @@ spec:
                   - secretName: grafana-cert
                     hosts:
                       - grafana.ARGOCD_ENV_DOMAIN
+            additionalPrometheusRulesMap:
+              rules:
+                groups:
+                  - name: latency-monitor
+                    rules:
+                      - alert: LatencyMonitorHighLatency
+                        expr: sum(rpch_latencies{quantile="0.5"}) > 1
+                        for: 5m
+                        labels:
+                          severity: warning
+                        annotations:
+                          summary: "Q50% latencies is very high"
+                          description: "50% of all RPCH request latencies have been above 1 second for 5 minutes"
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
