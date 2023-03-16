@@ -134,8 +134,16 @@ spec:
                         labels:
                           severity: warning
                         annotations:
-                          summary: "Q50% latencies is very high"
+                          summary: "Q50% latencies are very high"
                           description: "50% of all RPCH request latencies have been above 1 second for 5 minutes"
+                      - alert: LatencyMonitorMediocoreLatency
+                        expr: sum(rpch_latencies{quantile="0.5"}) > 0.5
+                        for: 5m
+                        labels:
+                          severity: info
+                        annotations:
+                          summary: "Q50% latencies are mediocore"
+                          description: "50% of all RPCH request latencies have been above 500 milliseconds for 5 minutes"
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
