@@ -17,6 +17,10 @@ spec:
             ingressRoute:
               dashboard:
                 enabled: true
+            metrics:
+              prometheus:
+                service:
+                  enabled: true
             service:
               #The type must be LoadBalancer!
               type: LoadBalancer
