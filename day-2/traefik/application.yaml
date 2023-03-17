@@ -19,6 +19,7 @@ spec:
                 enabled: true
             metrics:
               prometheus:
+                disableAPICheck: true
                 service:
                   enabled: true
                 serviceMonitor:
