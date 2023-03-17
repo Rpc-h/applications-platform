@@ -34,11 +34,10 @@ spec:
                       expr: up{job="traefik"} == 0
                       for: 5m
                       labels:
-                        context: traefik
                         severity: warning
                       annotations:
                         summary: "Traefik Down"
-                        description: "{{ $labels.pod }} on {{ $labels.nodename }} is down"
+                        description: "Traefik pod {{ $labels.pod }} is down"
             service:
               #The type must be LoadBalancer!
               type: LoadBalancer
