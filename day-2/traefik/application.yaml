@@ -21,7 +21,7 @@ spec:
               prometheus:
                 service:
                   enabled: true
-                disableAPICheck: false
+                disableAPICheck: true
                 serviceMonitor:
                   jobLabel: traefik
                   interval: 30s
