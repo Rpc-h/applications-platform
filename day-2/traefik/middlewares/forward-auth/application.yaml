@@ -15,9 +15,9 @@ spec:
           value: |
             env:
               TZ: UTC
-              SECRET: traefik-forward-auth
               URL_PATH: /_oauth
               DEFAULT_PROVIDER: google
+              LOG_LEVEL: debug
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
