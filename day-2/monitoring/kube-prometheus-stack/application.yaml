@@ -110,11 +110,10 @@ spec:
               grafana.ini:
                 server:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
-                auth:
-                  anonymous:
-                    enabled: true
-                    hide_version: true
-                    org_role: Viewer
+                auth.anonymous:
+                  enabled: true
+                  hide_version: true
+                  org_role: Viewer
               ingress:
                 enabled: true
                 ingressClassName: traefik
