@@ -82,10 +82,16 @@ resource "helm_release" "argocd" {
 }
 
 resource "kubectl_manifest" "argocd_configmap" {
+  force_new          = true
+  override_namespace = helm_release.argocd.namespace
+
   yaml_body = file("./config/argocd/configmap.yaml")
 }
 
 resource "kubectl_manifest" "argocd_configmap_rbac" {
+  force_new          = true
+  override_namespace = helm_release.argocd.namespace
+
   yaml_body = file("./config/argocd/configmap-rbac.yaml")
 }
 
