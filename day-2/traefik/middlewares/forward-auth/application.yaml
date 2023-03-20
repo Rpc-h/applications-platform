@@ -18,6 +18,21 @@ spec:
               URL_PATH: /_oauth
               DEFAULT_PROVIDER: google
               LOG_LEVEL: debug
+              SECRET:
+                valueFrom:
+                  secretKeyRef:
+                    name: forward-auth
+                    key: traefik-forward-auth-secret
+              PROVIDERS_GOOGLE_CLIENT_ID:
+                valueFrom:
+                  secretKeyRef:
+                    name: forward-auth
+                    key: traefik-forward-auth-google-client-id
+              PROVIDERS_GOOGLE_CLIENT_SECRET:
+                valueFrom:
+                  secretKeyRef:
+                    name: forward-auth
+                    key: traefik-forward-auth-google-client-secret
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
