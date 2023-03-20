@@ -67,6 +67,16 @@ resource "helm_release" "argocd" {
   }
 
   set {
+    name = 'configs.cm."users.anonymous.enabled"'
+    value = "true"
+  }
+
+  set {
+    name = 'configs.rbac."policy.default"'
+    value = "role:admin"
+  }
+
+  set {
     name  = "configs.credentialTemplates.ssh-creds.url"
     value = var.argocd_credentials_url
   }
