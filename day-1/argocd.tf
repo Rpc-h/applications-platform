@@ -67,16 +67,6 @@ resource "helm_release" "argocd" {
   }
 
   set {
-    name = "configs.cm.\"users.anonymous.enabled\""
-    value = "true"
-  }
-
-  set {
-    name = "configs.rbac.\"policy.default\""
-    value = "role:admin"
-  }
-
-  set {
     name  = "configs.credentialTemplates.ssh-creds.url"
     value = var.argocd_credentials_url
   }
@@ -89,6 +79,14 @@ resource "helm_release" "argocd" {
   depends_on = [
     kubernetes_secret.argocd
   ]
+}
+
+resource "kubectl_manifest" "argocd_configmap" {
+  yaml_body = file("./config/argocd/configmap.yaml")
+}
+
+resource "kubectl_manifest" "argocd_configmap_rbac" {
+  yaml_body = file("./config/argocd/configmap-rbac.yaml")
 }
 
 resource "kubectl_manifest" "argocd" {

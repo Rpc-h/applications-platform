@@ -136,15 +136,15 @@ spec:
                           severity: warning
                         annotations:
                           summary: "Q50% latencies are very high."
-                          description: "50% of all RPCh request latencies have been above 1 second for 5 minutes."
+                          description: "50% of all successful RPCh request latencies have been above 1 second for 5 minutes."
                       - alert: LatencyMonitorLowLatencyCount
-                        expr: increase(rpch_latencies_count[60s]) < 10
+                        expr: increase(rpch_latencies_count[60s]) < 25
                         for: 5m
                         labels:
                           severity: warning
                         annotations:
                           summary: "Latency count is very low."
-                          description: "Less than 10 RPCh latency requests have been observed during the last 5 minutes."
+                          description: "Less than 25 successful RPCh latency requests have been observed during the last 5 minutes."
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
