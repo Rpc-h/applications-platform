@@ -4,7 +4,7 @@ server:
     ingressClassName: traefik
     annotations:
       traefik.ingress.kubernetes.io/router.entrypoints: websecure
-      traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
+      traefik.ingress.kubernetes.io/router.middlewares: traefik-forward-auth@kubernetescrd
       cert-manager.io/cluster-issuer: production
     path: /
     tls:
