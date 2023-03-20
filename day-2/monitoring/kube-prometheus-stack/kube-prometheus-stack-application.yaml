@@ -30,7 +30,7 @@ spec:
                 ingressClassName: traefik
                 annotations:
                   traefik.ingress.kubernetes.io/router.entrypoints: websecure
-                  traefik.ingress.kubernetes.io/router.middlewares: auth-traefik-forward-auth@kubernetescrd
+                  traefik.ingress.kubernetes.io/router.middlewares: authelia-forward-auth@kubernetescrd
                   cert-manager.io/cluster-issuer: production
                 hosts:
                   - alertmanager.ARGOCD_ENV_DOMAIN
