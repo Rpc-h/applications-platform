@@ -67,12 +67,12 @@ resource "helm_release" "argocd" {
   }
 
   set {
-    name = "configs.cm.users.anonymous.enabled"
+    name = "configs.cm.\"users.anonymous.enabled\""
     value = "true"
   }
 
   set {
-    name = "configs.rbac.policy.default"
+    name = "configs.rbac.\"policy.default\""
     value = "role:admin"
   }
 
