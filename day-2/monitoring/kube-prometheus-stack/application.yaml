@@ -142,7 +142,7 @@ spec:
                           summary: "Q50% latencies are very high."
                           description: "50% of all successful RPCh request latencies have been above 1 second for 5 minutes."
                       - alert: LatencyMonitorHighFailureCount
-                        expr: increase(rpch_latencies_failure_count[60s]) > 10
+                        expr: increase(rpch_latencies_failure_count[60s]) > 4
                         for: 5m
                         labels:
                           severity: warning
