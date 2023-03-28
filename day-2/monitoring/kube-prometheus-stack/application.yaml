@@ -140,23 +140,24 @@ spec:
               rules:
                 groups:
                   - name: latency-monitor
+                    interval: 30s
                     rules:
                       - alert: LatencyMonitorHighLatency
-                        expr: rpch_latencies_success{quantile="0.5"} > 1
-                        for: 5m
+                        expr: rpch_latencies_success{quantile="0.9"} > 1
+                        for: 3m
                         labels:
                           severity: warning
                         annotations:
-                          summary: "Q50% latencies are very high."
-                          description: "50% of all successful RPCh request latencies have been above 1 second for 5 minutes."
+                          summary: "Latencies are very high."
+                          description: "10% of all successful RPCh request latencies (quantile Q90%) have been above 1 second for 3 minutes."
                       - alert: LatencyMonitorHighFailureCount
                         expr: increase(rpch_latencies_failure_count[60s]) > 4
-                        for: 5m
+                        for: 3m
                         labels:
                           severity: warning
                         annotations:
                           summary: "Failed latency request count is very high."
-                          description: "Failed RPCh latency request count has been more than 10 for 5 minutes."
+                          description: "Failed RPCh latency request count has been more than 4 for 3 minutes."
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
