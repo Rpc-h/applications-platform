@@ -51,6 +51,10 @@ spec:
                       match:
                         severity: null
                       continue: false
+                    - receiver: "telegram"
+                      match_re:
+                        severity: ^(info|warning|critical)$
+                      continue: true
                     - receiver: "info"
                       match:
                         severity: info
@@ -71,6 +75,10 @@ spec:
                   - name: "critical"
                     webhook_configs:
                       - url: "http://notification-service.monitoring:8080/alertmanager/room/%21HgRjXaMRVLzZYZPEFg:hoprnet.io"
+                  - name: "telegram"
+                    telegram_configs:
+                      - chat_id: -1001562396359
+                        bot_token: 6201490054:AAEjF_1ahOhmK1ysT2pD9gNRjIjzIwD1JF4
             kubeStateMetrics:
               enabled: true
             nodeExporter:
