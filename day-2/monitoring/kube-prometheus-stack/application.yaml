@@ -125,7 +125,7 @@ spec:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
                 auth.google:
                   enabled: true
-                  allow_sign_up: false
+                  allow_sign_up: true
                   auto_login: false
                   scopes: https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email
                   auth_url: https://accounts.google.com/o/oauth2/auth
