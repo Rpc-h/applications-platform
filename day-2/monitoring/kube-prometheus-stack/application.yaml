@@ -83,6 +83,8 @@ spec:
               enabled: true
             nodeExporter:
               enabled: true
+            prometheusOperator:
+              logLevel: info
             prometheus:
               enabled: true
               ingress:
