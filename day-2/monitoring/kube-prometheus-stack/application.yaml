@@ -113,6 +113,9 @@ spec:
             grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
+              env:
+                - name: GF_FEATURE_TOGGLES_ENABLE
+                  value: publicDashboards
               persistence:
                 enabled: true
                 storageClassName: main
