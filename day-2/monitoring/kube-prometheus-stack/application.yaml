@@ -140,7 +140,6 @@ spec:
               rules:
                 groups:
                   - name: latency-monitor
-                    interval: 30s
                     rules:
                       - alert: LatencyMonitorHighLatency
                         expr: rpch_latencies_success{quantile="0.9"} > 1
