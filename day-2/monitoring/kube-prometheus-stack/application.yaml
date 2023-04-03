@@ -114,7 +114,7 @@ spec:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
               env:
-                - GF_FEATURE_TOGGLES_ENABLE: publicDashboards
+                GF_FEATURE_TOGGLES_ENABLE: publicDashboards
               persistence:
                 enabled: true
                 storageClassName: main
