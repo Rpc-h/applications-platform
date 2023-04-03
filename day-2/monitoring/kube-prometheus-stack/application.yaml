@@ -115,6 +115,7 @@ spec:
               adminPassword: ARGOCD_ENV_RANDOM_STRING
               env:
                 GF_FEATURE_TOGGLES_ENABLE: publicDashboards
+              envFromSecret: grafana
               persistence:
                 enabled: true
                 storageClassName: main
@@ -122,10 +123,13 @@ spec:
               grafana.ini:
                 server:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
-                auth.anonymous:
+                auth.google:
                   enabled: true
-                  hide_version: true
-                  org_role: Viewer
+                  allow_sign_up: false
+                  auto_login: false
+                  scopes: https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email
+                  auth_url: https://accounts.google.com/o/oauth2/auth
+                  token_url: https://accounts.google.com/o/oauth2/token
               ingress:
                 enabled: true
                 ingressClassName: traefik
