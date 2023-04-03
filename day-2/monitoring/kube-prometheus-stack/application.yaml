@@ -142,7 +142,7 @@ spec:
                   - name: latency-monitor
                     rules:
                       - alert: LatencyMonitorHighLatency
-                        expr: rpch_latencies_success{quantile="0.9"} > 1
+                        expr: rpch_latencies_success{quantile="0.9"} > 0.5
                         for: 3m
                         labels:
                           severity: warning
