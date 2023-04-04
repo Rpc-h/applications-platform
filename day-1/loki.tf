@@ -12,8 +12,10 @@ resource "google_service_account_iam_binding" "loki" {
 }
 
 resource "google_storage_bucket" "loki" {
-  location      = var.google_region
-  name          = "${var.name}-loki"
+  location                    = var.google_region
+  name                        = "${var.name}-loki"
+  uniform_bucket_level_access = true
+  public_access_prevention    = "enforced"
 
   autoclass {
     enabled = true
