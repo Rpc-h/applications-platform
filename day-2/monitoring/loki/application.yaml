@@ -21,6 +21,16 @@ spec:
             monitoring:
               selfMonitoring:
                 enabled: false
+            loki:
+              auth_enabled: false
+              storage:
+                bucketNames:
+                  chunks: ARGOCD_ENV_CLUSTER_NAME-loki
+                  ruler: ARGOCD_ENV_CLUSTER_NAME-loki
+                  admin: ARGOCD_ENV_CLUSTER_NAME-loki
+                type: gcs
+            limits_config:
+              retention_period: 180d
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
