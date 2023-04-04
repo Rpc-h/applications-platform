@@ -21,6 +21,16 @@ spec:
             monitoring:
               selfMonitoring:
                 enabled: false
+            write:
+              replicas: 2
+              persistence:
+                storageClass: main
+                enableStatefulSetAutoDeletePVC: false
+            read:
+              replicas: 2
+              persistence:
+                storageClass: main
+                enableStatefulSetAutoDeletePVC: false
             loki:
               auth_enabled: false
               storage:
