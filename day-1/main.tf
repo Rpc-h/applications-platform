@@ -2,8 +2,10 @@
 resource "google_project_iam_binding" "main" {
   members = [
     "serviceAccount:${google_service_account.cert_manager.email}",
-    "serviceAccount:${google_service_account.external_dns.email}"
+    "serviceAccount:${google_service_account.external_dns.email}",
+    "serviceAccount:${google_service_account.loki.email}"
   ]
+
   role = "roles/dns.admin"
   #Not inferred from the provider
   project = var.google_project
