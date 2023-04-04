@@ -14,7 +14,6 @@ resource "google_service_account_iam_binding" "loki" {
 resource "google_storage_bucket" "loki" {
   location      = var.google_region
   name          = "${var.name}-loki"
-  storage_class = "REGIONAL"
 
   autoclass {
     enabled = true
