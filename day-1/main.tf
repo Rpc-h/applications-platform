@@ -1,14 +1,25 @@
 #See the reason behind it here: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam#google_project_iam_binding
-resource "google_project_iam_binding" "main" {
+resource "google_project_iam_binding" "dns" {
+  project = var.google_project #Not inferred from the provider
+
   members = [
+    #TODO - this should be limited to a single domain
     "serviceAccount:${google_service_account.cert_manager.email}",
     "serviceAccount:${google_service_account.external_dns.email}",
-    "serviceAccount:${google_service_account.loki.email}"
   ]
 
   role = "roles/dns.admin"
-  #Not inferred from the provider
-  project = var.google_project
+}
+
+#See the reason behind it here: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam#google_project_iam_binding
+resource "google_project_iam_binding" "storage" {
+  project = var.google_project #Not inferred from the provider
+
+  members = [
+    "serviceAccount:${google_service_account.loki.email}"
+  ]
+
+  role = "roles/storage.objectAdmin"
 }
 
 #Disable the built-in default storage class
