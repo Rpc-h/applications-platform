@@ -120,6 +120,11 @@ spec:
                 enabled: true
                 storageClassName: main
                 size: 1Gi
+              additionalDataSources:
+                - name: Loki
+                  type: loki
+                  url: http://loki-read.monitoring:3100
+                  isDefault: false
               grafana.ini:
                 server:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
