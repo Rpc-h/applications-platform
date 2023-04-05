@@ -21,10 +21,10 @@ spec:
             monitoring:
               selfMonitoring:
                 enabled: false
-              lokiCanary:
-                enabled: false
                 grafanaAgent:
                   installOperator: false
+              lokiCanary:
+                enabled: false
             write:
               replicas: 2
               persistence:
