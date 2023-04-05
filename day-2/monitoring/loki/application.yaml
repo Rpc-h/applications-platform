@@ -19,8 +19,10 @@ spec:
             test:
               enabled: false
             monitoring:
+              dashboards:
+                enabled: false
               selfMonitoring:
-                enabled: true
+                enabled: false
                 grafanaAgent:
                   installOperator: false
               lokiCanary:
