@@ -17,6 +17,15 @@ spec:
               logLevel: warn
               clients:
                 - url: http://loki-write.monitoring:3100/loki/api/v1/push
+              sidecar:
+                configReloader:
+                  enabled: true
+              snippets:          
+                extraRelabelConfigs:
+                  - source_labels: [ __meta_kubernetes_pod_container_image ]
+                    regex: (.*)
+                    target_label: image
+                    action: replace
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
