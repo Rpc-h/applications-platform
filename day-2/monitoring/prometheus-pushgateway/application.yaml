@@ -23,8 +23,8 @@ spec:
                 - pushgateway.ARGOCD_ENV_DOMAIN
               tls:
                 - secretName: pushgateway-cert
-                hosts:
-                - pushgateway.ARGOCD_ENV_DOMAIN
+                  hosts:
+                  - pushgateway.ARGOCD_ENV_DOMAIN
             serviceMonitor:
               enabled: true
               namespace: monitoring
