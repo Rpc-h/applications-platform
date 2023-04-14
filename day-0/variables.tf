@@ -16,24 +16,24 @@ variable "name" {
 variable "memory_min" {
   type        = number
   default     = 8
-  description = "Minimum amount of memory for auto-provisioned nodes"
+  description = "Minimum amount of memory for the whole cluster"
 }
 
 variable "memory_max" {
   type        = number
   default     = 32
-  description = "Maximum amount of memory for auto-provisioned nodes"
+  description = "Maximum amount of memory for the whole cluster"
 }
 
 variable "cpu_min" {
   type        = number
   default     = 4
-  description = "Minimum amount of CPU cores for auto-provisioned nodes"
+  description = "Minimum amount of CPU cores for the whole cluster"
 }
 
 variable "cpu_max" {
   type        = number
   default     = 8
-  description = "Maximum amount of CPU cores for auto-provisioned nodes"
+  description = "Maximum amount of CPU cores for the whole cluster"
 }
 
