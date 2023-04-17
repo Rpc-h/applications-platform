@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: telegram
+  namespace: monitoring
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  encryptedData:
+    telegram: AgCJdhYhZR/g4nyVA+snM2lqdartK5oH6Yg+LKJB/eQlp5XSSjsmLisOduvnXeUelFyPlLHTzp+NON8caziBfc5W9FYMjnPLZgNEGzvG6hCQcTzhPej8YM14zkC7D4tFjxKwFSI5IJ8KVHHdd/p+UebSiI2Uny75wmd+mmzuMtMkNCdMy2mNd68PQDmkk7Fl87WVc0o7EIdCSWg8qPCID0Rrhiv1fU+OuRnGAN0tKpSEtJTjiqggLUyTSDvqgQXvjJeLhlEiExcfsi3X0PS/Ov4+SLX0DlKuxDvwPNkrPnSc7OIUplXHTzFfO+J2+6vsMeTKjLfiMgw1Zgcyd1Mx31+wRbT8IAsJi8DAQ8SV2/R2I1GoD7domAvcXjIwmwp9272eNL86uLXPnz/s7CJ45RarwnDBYY75MzZt+MIJDoQBWy9Cw0S3Mxu1OG4/u9XPnkYhvyPWnippHt3+YXyoIdyvRKbJN0+X8Hs2HzP/bOvSXDwyh/F6rm3pKyBbVoKIggpUXCPtDaWq6teMZcaVx6jpYhauBWdR9Gc7iIBIPp6CvEhLt/k/G8w40JcrjRihgofza4EgdseWDpjQ7JAEPCPwPh7FH10OWTxIZR6Jen05v+Find7zDzm+6iWd5a845Z1MJmbokR72jgfKgDHEmXNmadDPsSdezdhVfmsSCbJtGTVGkp4G3WQryrMbzFCgxpZdjLpVjAuuHXf5ojWYG96KOz1ZhMnT+0b8n8tfydTP31ktjN02L9Jc+GfeXPlo
+  template:
+    metadata:
+      creationTimestamp: null
+      name: telegram
+      namespace: monitoring
