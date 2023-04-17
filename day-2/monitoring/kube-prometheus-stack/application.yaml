@@ -102,6 +102,7 @@ spec:
                     hosts:
                       - prometheus.ARGOCD_ENV_DOMAIN
               prometheusSpec:
+                ruleSelectorNilUsesHelmValues: false
                 serviceMonitorSelectorNilUsesHelmValues: false
                 storageSpec:
                   volumeClaimTemplate:
