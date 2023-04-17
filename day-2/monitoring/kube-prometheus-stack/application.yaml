@@ -82,15 +82,6 @@ spec:
                         bot_token: 6201490054:AAEjF_1ahOhmK1ysT2pD9gNRjIjzIwD1JF4
             kubeStateMetrics:
               enabled: true
-            kube-state-metrics:
-              prometheus:
-                monitor:
-                  relabelings:
-                    #Expose discovery stage meta labels as real labels
-                    - sourceLabels: [ __meta_kubernetes_pod_container_image ]
-                      regex: (.*)
-                      targetLabel: image
-                      action: replace
             nodeExporter:
               enabled: true
             prometheusOperator:
