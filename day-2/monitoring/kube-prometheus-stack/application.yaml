@@ -78,7 +78,6 @@ spec:
                   - name: "telegram"
                     telegram_configs:
                       - chat_id: -1001562396359
-                        #bot_token_file: telegram #Enable this in couple versions
                         bot_token: 6201490054:AAEjF_1ahOhmK1ysT2pD9gNRjIjzIwD1JF4
             kubeStateMetrics:
               enabled: true
