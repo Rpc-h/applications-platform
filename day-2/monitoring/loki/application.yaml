@@ -16,6 +16,19 @@ spec:
             serviceAccount:
               annotations:
                 iam.gke.io/gcp-service-account: ARGOCD_ENV_CLUSTER_NAME-loki@ARGOCD_ENV_GOOGLE_PROJECT.iam.gserviceaccount.com
+            ingress:
+              enabled: true
+              annotations:
+                traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                cert-manager.io/cluster-issuer: production
+              hosts:
+                - loki.ARGOCD_ENV_DOMAIN
+              tls:
+                - secretName: loki-cert
+                  hosts:
+                    - loki.ARGOCD_ENV_DOMAIN
+            gateway:
+              enabled: false
             test:
               enabled: false
             monitoring:
