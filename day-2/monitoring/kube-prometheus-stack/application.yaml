@@ -215,8 +215,7 @@ spec:
                           - "37.27.18.179:9100"
                         labels:
                           hostname: "hetzner-staging-alpha-25"
-
-        grafana:
+            grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
               env:
