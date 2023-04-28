@@ -112,6 +112,134 @@ spec:
                       resources:
                         requests:
                           storage: 10Gi
+                additionalScrapeConfigs:
+                  - job_name: hetzner
+                    static_configs:
+                      - targets:
+                          - "78.47.150.194"
+                        labels:
+                          hostname: "hetzner-staging-alpha-1"
+                          ip: "78.47.150.194"
+                      - targets:
+                          - "91.107.194.8"
+                        labels:
+                          hostname: "hetzner-staging-alpha-2"
+                          ip: "91.107.194.8"
+                      - targets:
+                          - "159.69.122.70"
+                        labels:
+                          hostname: "hetzner-staging-alpha-4"
+                          ip: "159.69.122.70"
+                      - targets:
+                          - "49.12.246.83"
+                        labels:
+                          hostname: "hetzner-staging-alpha-3"
+                          ip: "49.12.246.83"
+                      - targets:
+                          - "142.132.184.57"
+                        labels:
+                          hostname: "hetzner-staging-alpha-5"
+                          ip: "142.132.184.57"
+                      - targets:
+                          - "128.140.52.34"
+                        labels:
+                          hostname: "hetzner-staging-alpha-6"
+                          ip: "128.140.52.34"
+                      - targets:
+                          - "116.203.251.244"
+                        labels:
+                          hostname: "hetzner-staging-alpha-7"
+                          ip: "116.203.251.244"
+                      - targets:
+                          - "49.12.13.222"
+                        labels:
+                          hostname: "hetzner-staging-alpha-8"
+                          ip: "49.12.13.222"
+                      - targets:
+                          - "49.13.13.52"
+                        labels:
+                          hostname: "hetzner-staging-alpha-9"
+                          ip: "49.13.13.52"
+                      - targets:
+                          - "49.13.13.55"
+                        labels:
+                          hostname: "hetzner-staging-alpha-10"
+                          ip: "49.13.13.55"
+                      - targets:
+                          - "91.107.205.15"
+                        labels:
+                          hostname: "hetzner-staging-alpha-11"
+                          ip: "91.107.205.15"
+                      - targets:
+                          - "49.13.13.104"
+                        labels:
+                          hostname: "hetzner-staging-alpha-12"
+                          ip: "49.13.13.104"
+                      - targets:
+                          - "49.13.13.114"
+                        labels:
+                          hostname: "hetzner-staging-alpha-13"
+                          ip: "49.13.13.114"
+                      - targets:
+                          - "49.13.13.117"
+                        labels:
+                          hostname: "hetzner-staging-alpha-14"
+                          ip: "49.13.13.117"
+                      - targets:
+                          - "49.13.13.106"
+                        labels:
+                          hostname: "hetzner-staging-alpha-15"
+                          ip: "49.13.13.106"
+                      - targets:
+                          - "95.217.234.91"
+                        labels:
+                          hostname: "hetzner-staging-alpha-16"
+                          ip: "95.217.234.91"
+                      - targets:
+                          - "65.21.54.172"
+                        labels:
+                          hostname: "hetzner-staging-alpha-17"
+                          ip: "65.21.54.172"
+                      - targets:
+                          - "135.181.156.126"
+                        labels:
+                          hostname: "hetzner-staging-alpha-18"
+                          ip: "135.181.156.126"
+                      - targets:
+                          - "135.181.87.129"
+                        labels:
+                          hostname: "hetzner-staging-alpha-19"
+                          ip: "135.181.87.129"
+                      - targets:
+                          - "135.181.207.234"
+                        labels:
+                          hostname: "hetzner-staging-alpha-20"
+                          ip: "135.181.207.234"
+                      - targets:
+                          - "37.27.7.199"
+                        labels:
+                          hostname: "hetzner-staging-alpha-21"
+                          ip: "37.27.7.199"
+                      - targets:
+                          - "135.181.101.184"
+                        labels:
+                          hostname: "hetzner-staging-alpha-22"
+                          ip: "135.181.101.184"
+                      - targets:
+                          - "95.217.133.151"
+                        labels:
+                          hostname: "hetzner-staging-alpha-23"
+                          ip: "95.217.133.151"
+                      - targets:
+                          - "95.217.161.46"
+                        labels:
+                          hostname: "hetzner-staging-alpha-24"
+                          ip: "95.217.161.46"
+                      - targets:
+                          - "37.27.18.179"
+                        labels:
+                          hostname: "hetzner-staging-alpha-25"
+                          ip: "37.27.18.179"
             grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
