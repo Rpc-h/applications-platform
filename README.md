@@ -1,3 +1,7 @@
+# application-platform
+
+This project aims to provide you with a fully-automated Kubernetes platform with focus on monitoring, security, accessability, and ease-of-use.
+
 # Setup
 
 ## Preparation
