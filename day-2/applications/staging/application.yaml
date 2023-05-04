@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-staging
+  name: staging
   namespace: argocd
 spec:
-  project: default
+  project: staging
   source:
     #TODO - do not hardcode
     repoURL: https://github.com/Rpc-h/applications
-    targetRevision: staging
-    path: .
+    targetRevision: main
+    path: staging
     plugin:
       env:
         - name: "DIRECTORY_RECURSE"
           value: "true"
   destination:
     server: https://kubernetes.default.svc
-    namespace: apps
+    namespace: staging
   syncPolicy:
     automated:
       prune: true
