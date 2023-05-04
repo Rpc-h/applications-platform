@@ -13,6 +13,9 @@ server:
     - --insecure #This is required otherwise I am getting redirect loops
 dex:
   enabled: false
+configs:
+  params:
+    application.namespaces: "*"
 repoServer:
   extraContainers:
     - name: argocd-sugar
