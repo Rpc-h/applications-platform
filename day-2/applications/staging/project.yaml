@@ -11,7 +11,11 @@ spec:
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-    - '*'
+    - "*"
+
+  # Allow manifests to deploy from any namespace
+  sourceNamespaces:
+    - "staging"
 
   destinations:
     - namespace: staging
@@ -20,16 +24,16 @@ spec:
 
   # Deny all cluster-scoped resources from being created, except for Namespace
   clusterResourceWhitelist:
-    - group: ''
+    - group: ""
       kind: Namespace
 
   # Allow all namespaced-scoped resources to be created, except for ResourceQuota, LimitRange, NetworkPolicy
   namespaceResourceBlacklist:
-    - group: ''
+    - group: ""
       kind: ResourceQuota
-    - group: ''
+    - group: ""
       kind: LimitRange
-    - group: ''
+    - group: ""
       kind: NetworkPolicy
 
   # Enables namespace orphaned resource monitoring.
