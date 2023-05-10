@@ -4,7 +4,7 @@ metadata:
   name: staging
   namespace: argocd
 spec:
-  project: default
+  project: staging
   source:
     #TODO - do not hardcode
     repoURL: https://github.com/Rpc-h/applications
