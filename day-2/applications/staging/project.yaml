@@ -27,18 +27,18 @@ spec:
       name: in-cluster
 
   # Deny all cluster-scoped resources from being created, except for Namespace
-  clusterResourceWhitelist:
-    - group: ""
-      kind: Namespace
+#  clusterResourceWhitelist:
+#    - group: ""
+#      kind: Namespace
 
   # Allow all namespaced-scoped resources to be created, except for ResourceQuota, LimitRange, NetworkPolicy
-  namespaceResourceBlacklist:
-    - group: ""
-      kind: ResourceQuota
-    - group: ""
-      kind: LimitRange
-    - group: ""
-      kind: NetworkPolicy
+#  namespaceResourceBlacklist:
+#    - group: ""
+#      kind: ResourceQuota
+#    - group: ""
+#      kind: LimitRange
+#    - group: ""
+#      kind: NetworkPolicy
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
