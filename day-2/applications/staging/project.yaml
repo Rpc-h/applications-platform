@@ -16,7 +16,8 @@ spec:
   # Allow manifests to deploy from the specified namespaces (or use regex like "*" or "namespace-*")
   sourceNamespaces:
     - "staging"
-    - "staging-*"
+    - "staging-operator"
+    - "staging-*" #TODO - this was not working...
 
   destinations:
     - namespace: staging
