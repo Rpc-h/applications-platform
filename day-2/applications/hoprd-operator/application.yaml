@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: hoprd-operator
-  namespace: argocd
+  namespace: hoprd-operator
 spec:
   project: hoprd-operator
   source:
