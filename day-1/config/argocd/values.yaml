@@ -10,7 +10,7 @@ server:
     tls:
       - secretName: argocd-cert
   extraArgs:
-    - --insecure #This is required otherwise I am getting redirect loops
+    - --insecure #This is required otherwise I am getting redirect loops. TODO - do I still need this?
 dex:
   enabled: false
 configs:

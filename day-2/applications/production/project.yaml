@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: staging
+  name: production
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: staging
+  description: production
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
@@ -15,14 +15,10 @@ spec:
 
   # Allow manifests to deploy from the specified namespaces (or use regex like "*" or "namespace-*")
   sourceNamespaces:
-    - "staging"
-    - "staging-*"
+    - "production"
 
   destinations:
-    - namespace: staging
-      server: https://kubernetes.default.svc
-      name: in-cluster
-    - namespace: staging-*
+    - namespace: production
       server: https://kubernetes.default.svc
       name: in-cluster
 
