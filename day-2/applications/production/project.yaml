@@ -21,6 +21,9 @@ spec:
     - namespace: production
       server: https://kubernetes.default.svc
       name: in-cluster
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+      name: in-cluster
 
   # Deny all cluster-scoped resources from being created, except for Namespace
   clusterResourceWhitelist:
