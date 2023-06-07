@@ -20,7 +20,7 @@ spec:
                 traefik.ingress.kubernetes.io/router.entrypoints: websecure
                 cert-manager.io/cluster-issuer: production
               hosts:
-                - pushgateway.ARGOCD_ENV_ DOMAIN
+                - pushgateway.ARGOCD_ENV_DOMAIN
               tls:
                 - secretName: pushgateway-cert
                   hosts:
