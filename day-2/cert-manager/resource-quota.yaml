@@ -5,8 +5,9 @@ metadata:
   namespace: cert-manager
 spec:
   hard:
-    requests.cpu: "100m"
-    requests.memory: 256Mi
+    #Remember to give enough resources for rolling release
+    requests.cpu: "20m"
+    requests.memory: 512Mi
     requests.storage: 10Gi
-    limits.cpu: "200m"
+    limits.cpu: "20m"
     limits.memory: 512Mi
