@@ -6,8 +6,8 @@ metadata:
 spec:
   hard:
     #Remember to give enough resources for rolling release
-    requests.cpu: "20m"
+    requests.cpu: "1000m"
     requests.memory: 512Mi
     requests.storage: 10Gi
-    limits.cpu: "20m"
+    limits.cpu: "100m"
     limits.memory: 512Mi
