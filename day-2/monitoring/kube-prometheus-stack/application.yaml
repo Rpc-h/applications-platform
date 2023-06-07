@@ -9,7 +9,7 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: "45.10.1"
     chart: kube-prometheus-stack
-    plugin:
+    plugin:d
       env:
         - name: HELM_VALUES
           #TODO - grafana adminSecret should be generated on day-1 and not passed to argocd-sugar plugin due to potential security leaks

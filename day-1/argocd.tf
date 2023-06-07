@@ -8,6 +8,23 @@ resource "kubernetes_namespace" "argocd" {
   ]
 }
 
+resource "kubernetes_resource_quota" "argocd" {
+  metadata {
+    name      = "argocd"
+    namespace = kubernetes_namespace.argocd.id
+  }
+
+  spec {
+    hard = {
+      requests.cpu     = "300m"
+      requests.memory  = "1Gi"
+      requests.storage = "10Gi"
+      limits.cpu       = "300m"
+      limits.memory    = "1Gi"
+    }
+  }
+}
+
 resource "random_password" "main" {
   length      = 16
   special     = false

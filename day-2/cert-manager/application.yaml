@@ -18,7 +18,30 @@ spec:
               annotations:
                 iam.gke.io/gcp-service-account: ARGOCD_ENV_CLUSTER_NAME-cert-manager@ARGOCD_ENV_GOOGLE_PROJECT.iam.gserviceaccount.com
             securityContext:
-              fsGroup: 1001
+              runAsNonRoot: true
+              seccompProfile:
+                type: RuntimeDefault
+            containerSecurityContext:
+              runAsNonRoot: true
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities:
+                drop:
+                  - ALL
+            resources:
+              requests:
+                cpu: 100m
+                memory: 128Mi
+              limits:
+                cpu: 100m
+                memory: 256Mi
+            prometheus:
+              enabled: true
+              servicemonitor:
+                enabled: true
+            webhook:
+              networkPolicy:
+                enabled: true
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager

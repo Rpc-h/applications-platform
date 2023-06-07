@@ -65,6 +65,31 @@ resource "google_container_cluster" "main" {
     enabled = true
   }
 
+  #Both required for enabling network policies
+  network_policy {
+    enabled = true
+  }
+
+  addons_config {
+    #Both required for enabling network policies
+    network_policy_config {
+      disabled = false
+    }
+
+    gcp_filestore_csi_driver_config {
+      enabled = true
+    }
+  }
+
+  #Maintenance window of 5 hours UTC (minimum of 4 hours allowed)
+  maintenance_policy {
+    recurring_window {
+      start_time = "2019-01-01T12:00:00Z"
+      end_time = "2019-01-01T17:00:00Z"
+      recurrence = "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR"
+    }
+  }
+
   #Enable if you want to have metrics + logs on GCP
   #  logging_config {
   #    enable_components = [
