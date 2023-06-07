@@ -5,8 +5,8 @@ metadata:
   namespace: cert-manager
 spec:
   hard:
-    requests.cpu: "100m"
-    requests.memory: 256Mi
+    requests.cpu: "10m"
+    requests.memory: 64Mi
     requests.storage: 10Gi
-    limits.cpu: "100m"
-    limits.memory: 256Mi
+    limits.cpu: "10m"
+    limits.memory: 64Mi

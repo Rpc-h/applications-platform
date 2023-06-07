@@ -30,11 +30,11 @@ spec:
                   - ALL
             resources:
               requests:
-                cpu: 100m
-                memory: 128Mi
+                cpu: 10m
+                memory: 32Mi
               limits:
-                cpu: 100m
-                memory: 256Mi
+                cpu: 10m
+                memory: 64Mi
             prometheus:
               enabled: true
               servicemonitor:
@@ -42,6 +42,21 @@ spec:
             webhook:
               networkPolicy:
                 enabled: true
+              resources:
+                requests:
+                  cpu: 10m
+                  memory: 16Mi
+                limits:
+                  cpu: 10m
+                  memory: 32Mi
+            cainjector:
+              resources: {}
+                requests:
+                  cpu: 10m
+                  memory: 64Mi
+                limits:
+                  cpu: 10m
+                  memory: 128Mi
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
