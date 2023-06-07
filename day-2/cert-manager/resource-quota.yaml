@@ -7,7 +7,7 @@ spec:
   hard:
     #Remember to give enough resources for rolling release
     requests.cpu: "100m"
-    requests.memory: 512Mi
-    requests.storage: 10Gi
+    requests.memory: "512Mi"
+    requests.storage: "10Gi"
     limits.cpu: "100m"
-    limits.memory: 512Mi
+    limits.memory: "512Mi"
