@@ -4,9 +4,8 @@ metadata:
   name: cert-manager
   namespace: cert-manager
 spec:
-  #Set limit range because resource quotas are defined and pods without specified limits for containers
-  #will fail to create. Also, set max and min limits to match the quotas since there might be just one
-  #container in the whole namespace.
+  #Set limit range because resource quotas are defined and pods
+  #without specified limits for containers will fail to create.
   limits:
     - defaultRequest: #default requests
         cpu: 10m
@@ -14,10 +13,4 @@ spec:
       default: #default limits
         cpu: 10m
         memory: 16Mi
-      min: #min limit range
-        cpu: 100m
-        memory: 512Mi
-      max: #max limit range
-        cpu: 100m
-        memory: 512Mi
       type: Container
