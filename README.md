@@ -35,10 +35,10 @@ We try to keep as little secret variables as possible by design. For the sake of
 For non-secret variables, simply edit/add them in the `.env` file, which gets sourced during pipeline runs, e.g.:
 
 ```dotenv
-export TF_VAR_name="rpch-alligator"
-export TF_VAR_domain="rpch.tech"
-export TF_VAR_argocd_repo_url="git@github.com:Rpc-h/infrastructure.git"
-export TF_VAR_argocd_credentials_url="git@github.com:Rpc-h"
+TF_VAR_name="rpch-alligator"
+TF_VAR_domain="rpch.tech"
+TF_VAR_argocd_repo_url="git@github.com:Rpc-h/infrastructure.git"
+TF_VAR_argocd_credentials_url="git@github.com:Rpc-h"
 ```
 
 ## Installation
