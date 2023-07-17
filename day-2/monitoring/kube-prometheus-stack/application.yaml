@@ -114,28 +114,158 @@ spec:
                         requests:
                           storage: 100Gi
                 additionalScrapeConfigs:
-                  - job_name: hetzner
+                  - job_name: hetzner-staging
                     static_configs:
                       - targets:
                           - "78.47.150.194:9100"
                         labels:
                           hostname: "hetzner-staging-alpha-1"
+                          job: "hetzner-staging-alpha-1"
+                          hoprd_network: monte_rosa
                       - targets:
                           - "91.107.194.8:9100"
                         labels:
                           hostname: "hetzner-staging-alpha-2"
-                      - targets:
-                          - "159.69.122.70:9100"
-                        labels:
-                          hostname: "hetzner-staging-alpha-4"
+                          job: "hetzner-staging-alpha-2"
+                          hoprd_network: monte_rosa
                       - targets:
                           - "49.12.246.83:9100"
                         labels:
                           hostname: "hetzner-staging-alpha-3"
+                          job: "hetzner-staging-alpha-3"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "159.69.122.70:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-4"
+                          job: "hetzner-staging-alpha-4"
+                          hoprd_network: monte_rosa
                       - targets:
                           - "142.132.184.57:9100"
                         labels:
                           hostname: "hetzner-staging-alpha-5"
+                          job: "hetzner-staging-alpha-5"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "128.140.52.34:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-6"
+                          job: "hetzner-staging-alpha-6"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "116.203.251.244:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-7"
+                          job: "hetzner-staging-alpha-7"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.12.13.222:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-8"
+                          job: "hetzner-staging-alpha-8"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.52:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-9"
+                          job: "hetzner-staging-alpha-9"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.55:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-10"
+                          job: "hetzner-staging-alpha-10"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "91.107.205.15:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-11"
+                          job: "hetzner-staging-alpha-11"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.104:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-12"
+                          job: "hetzner-staging-alpha-12"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.114:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-13"
+                          job: "hetzner-staging-alpha-13"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.117:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-14"
+                          job: "hetzner-staging-alpha-14"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "49.13.13.106:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-15"
+                          job: "hetzner-staging-alpha-15"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.217.234.91:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-16"
+                          job: "hetzner-staging-alpha-16"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.21.54.172:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-17"
+                          job: "hetzner-staging-alpha-17"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.156.126:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-18"
+                          job: "hetzner-staging-alpha-18"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.87.129:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-19"
+                          job: "hetzner-staging-alpha-19"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.207.234:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-20"
+                          job: "hetzner-staging-alpha-20"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "37.27.7.199:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-21"
+                          job: "hetzner-staging-alpha-21"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.101.184:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-22"
+                          job: "hetzner-staging-alpha-22"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.217.133.151:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-23"
+                          job: "hetzner-staging-alpha-23"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.217.161.46:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-24"
+                          job: "hetzner-staging-alpha-24"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "37.27.18.179:9100"
+                        labels:
+                          hostname: "hetzner-staging-alpha-25"
+                          job: "hetzner-staging-alpha-25"
+                          hoprd_network: monte_rosa
             grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
