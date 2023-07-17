@@ -266,6 +266,158 @@ spec:
                           hostname: "hetzner-staging-alpha-25"
                           job: "hetzner-staging-alpha-25"
                           hoprd_network: monte_rosa
+                  - job_name: hetzner-production
+                    static_configs:
+                      - targets:
+                          - "95.217.237.141:9100"
+                        labels:
+                          hostname: "production-0"
+                          job: "hetzner-production-0"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.92.114:9100"
+                        labels:
+                          hostname: "production-1"
+                          job: "hetzner-production-1"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.80.245:9100"
+                        labels:
+                          hostname: "production-2"
+                          job: "hetzner-production-2"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.107.160:9100"
+                        labels:
+                          hostname: "production-3"
+                          job: "hetzner-production-3"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.82.212:9100"
+                        labels:
+                          hostname: "production-4"
+                          job: "hetzner-production-4"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.217.215.176:9100"
+                        labels:
+                          hostname: "production-5"
+                          job: "hetzner-production-5"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.108.216.137:9100"
+                        labels:
+                          hostname: "production-6"
+                          job: "hetzner-production-6"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.109.161.241:9100"
+                        labels:
+                          hostname: "production-7"
+                          job: "hetzner-production-7"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.109.164.194:9100"
+                        labels:
+                          hostname: "production-8"
+                          job: "hetzner-production-8"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.216.197.139:9100"
+                        labels:
+                          hostname: "production-9"
+                          job: "hetzner-production-9"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.108.52.164:9100"
+                        labels:
+                          hostname: "production-10"
+                          job: "hetzner-production-10"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.21.185.184:9100"
+                        labels:
+                          hostname: "production-11"
+                          job: "hetzner-production-11"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.108.210.70:9100"
+                        labels:
+                          hostname: "production-12"
+                          job: "hetzner-production-12"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.216.210.22:9100"
+                        labels:
+                          hostname: "production-13"
+                          job: "hetzner-production-13"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.109.175.196:9100"
+                        labels:
+                          hostname: "production-14"
+                          job: "hetzner-production-14"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "135.181.81.142:9100"
+                        labels:
+                          hostname: "production-15"
+                          job: "hetzner-production-15"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.21.245.19:9100"
+                        labels:
+                          hostname: "production-16"
+                          job: "hetzner-production-16"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.21.158.45:9100"
+                        labels:
+                          hostname: "production-17"
+                          job: "hetzner-production-17"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.108.62.69:9100"
+                        labels:
+                          hostname: "production-18"
+                          job: "hetzner-production-18"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.216.170.194:9100"
+                        labels:
+                          hostname: "production-19"
+                          job: "hetzner-production-19"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.109.128.17:9100"
+                        labels:
+                          hostname: "production-20"
+                          job: "hetzner-production-20"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.216.208.130:9100"
+                        labels:
+                          hostname: "production-21"
+                          job: "hetzner-production-21"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "95.216.163.105:9100"
+                        labels:
+                          hostname: "production-22"
+                          job: "hetzner-production-22"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "65.109.227.57:9100"
+                        labels:
+                          hostname: "production-23"
+                          job: "hetzner-production-23"
+                          hoprd_network: monte_rosa
+                      - targets:
+                          - "37.27.20.245:9100"
+                        labels:
+                          hostname: "production-24"
+                          job: "hetzner-production-24"
+                          hoprd_network: monte_rosa
             grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING
