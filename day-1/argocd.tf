@@ -24,6 +24,7 @@ resource "kubernetes_resource_quota" "argocd" {
     }
   }
 }
+
 resource "random_password" "main" {
   length      = 16
   special     = false
