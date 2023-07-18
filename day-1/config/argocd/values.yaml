@@ -1,4 +1,9 @@
 server:
+  config:
+    helm.valuesFileSchemes: >-
+      kubectl,
+      http,
+      https
   ingress:
     enabled: true
     ingressClassName: traefik
@@ -38,6 +43,50 @@ repoServer:
         # mitigate path traversal attacks.
         - mountPath: /tmp
           name: cmp-tmp
+  clusterAdminAccess:
+    enabled: true
+  clusterRoleRules:
+    # -- Enable custom rules for the Repo server's Cluster Role resource
+    enabled: false
+    # -- List of custom rules for the Repo server's Cluster Role resource
+    rules:
+    - apiGroups:
+      - '*'
+      resources:
+      - '*'
+      verbs:
+      - 'list'
+      - 'get'
+  env:
+    - name: HELM_PLUGINS
+      value: /custom-tools/helm-plugins/
+    - name: HELM_KUBECTL_KUBECTL_PATH
+      value: /custom-tools/kubectl
+  serviceAccount:
+    create: true
   volumes:
     - emptyDir: {}
       name: cmp-tmp
+    - name: custom-tools
+      emptyDir: {}
+  volumeMounts:
+    - mountPath: /custom-tools
+      name: custom-tools
+  initContainers:
+    - name: download-tools
+      image: alpine:latest
+      command: [sh, -ec]
+      env:
+        - name: HELM_KUBECTL_VERSION
+          value: "1.0.1"
+        - name: KUBECTL_VERSION
+          value: "1.24.13"
+      args:
+        - |
+          mkdir -p /custom-tools/helm-plugins
+          wget -qO- https://github.com/jkroepke/helm-kubectl/releases/download/v${HELM_KUBECTL_VERSION}/helm-kubectl.tar.gz | tar -C /custom-tools/helm-plugins -xzf-;
+          wget -qO /custom-tools/kubectl https://dl.k8s.io/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl
+          chmod +x /custom-tools/*
+      volumeMounts:
+        - mountPath: /custom-tools
+          name: custom-tools
