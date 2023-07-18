@@ -1,0 +1,18 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: prometheus-scrape-auth
+  namespace: monitoring
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  encryptedData:
+    #TODO - this sealed secret should be a k8s secret and should be generated in day-1 from the inputs
+    HOPRD_API_TOKEN: AgBMD5zL4QGUyxtYA3ssTHWEJJVIFCkvCuWtFvG3aFStsEYKmrbLqgCL5i9bT7YZ8mtG+8pxX0pcRNuni9lZ7l4dtVvDV1DPGSCwmjq3OdeCZnM0EUe/68SCnRKT94MbOdkTkoUAyALJaCtsIlkGCc4C8LTBLnMqZsUPgCTCKHCYBoOJl/13NtM4dQNc8J+RodCeJZZeiROEVopcMy3J99WFlIRg2FG0einmNSAAbfOCSTwqc6wrXgSmzmvomRTW7l//M71UIWwTPrE9R6qOsdJjc8nJGMJiyggzNnWxY9nI3dtQ2zp8oVaaWIU9xXe5a/ebNtrZsyABSrvwNyt72HkjIUydE5OgxTxHno8L9i/SkiM/v8gmWOFvxUpyhp4qFJU23s5EugfADqQTWFnfLPFv100Pa9pIQVNWda3x8g1UtAQukez6/urkI6dsXk0HCXleOb3jU5+pGRYD8ZrDNlEeuBq/nHkbObBq6hDRmSN6CXeV515Q5Il7VvEEngf6JHYYJeys09JzQ1sfIP6QqJFaVoRKAAamxWlwIPQiNVgwfaKaw61bG7b66O/ZExbfVTnd4GU3xpDNZdSTMmhTTFf7EOHjQ+12+QKa5U9Ynlb31LljStlKVYtf4dBc21dey7G4qN1vddaBVakRbOzeUXem5zIlGlOAIiKYfZOGc6Bdmw8VILpbCEB0iu/GTakcQ9U037p7Lz2VbExU7rtZ8moED7OccCH9Zc0sKihuKP0eogcybCZkTW0Jfg==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: prometheus-scrape-auth
+      namespace: monitoring
+    type: Opaque

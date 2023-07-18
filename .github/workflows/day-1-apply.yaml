@@ -16,7 +16,7 @@ jobs:
       - name: Initialize and plan Terraform resources
         id: initialize-and-plan
         run: |
-          source .env
+          export $(cat .env | xargs)
           echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 -d > /tmp/credentials.json
           export GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
           export TF_VAR_google_project="${{ secrets.GOOGLE_PROJECT }}"
