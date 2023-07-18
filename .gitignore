@@ -4,3 +4,4 @@
 terraform.*
 .envrc
 tmp
+.direnv
