@@ -15,6 +15,7 @@ mkShell {
   nativeBuildInputs = [
     (google-cloud-sdk.withExtraComponents [ google-cloud-sdk.components.gke-gcloud-auth-plugin ])
     kubectl
+    kubeseal
 
     # custom pkg groups
     linuxPkgs
