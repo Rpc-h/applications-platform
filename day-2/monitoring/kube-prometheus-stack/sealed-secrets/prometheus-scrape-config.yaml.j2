@@ -1,3 +1,12 @@
+##
+## To generate the sealed secret execute the following command:
+##  ```
+##    export HOPRD_API_TOKEN=XXXXXX
+##    sed 's#__SCRAPE_USERNAME__#'"$HOPRD_API_TOKEN"'#g' ./day-2/monitoring/kube-prometheus-stack/templates/prometheus-scrape-config.yaml.j2 | kubeseal --controller-name=sealed-secrets --controller-namespace=sealed-secrets --format yaml > ./day-2/monitoring/kube-prometheus-stack/templates/prometheus-scrape-config.yaml
+##
+##  ```
+##
+---
 apiVersion: v1
 kind: Secret
 metadata:
@@ -8,7 +17,7 @@ stringData:
     - job_name: hetzner-staging-hoprd-metrics
       metrics_path: /api/v2/node/metrics
       basic_auth:
-        username: "{{ .Values.prometheusScrapeHoprdApiToken | b64dec }}"
+        username: __SCRAPE_USERNAME__
         password: ''
       static_configs:
         - targets:
@@ -163,7 +172,7 @@ stringData:
                hoprd_network: monte_rosa
     - job_name: hetzner-production-hoprd-metrics
       basic_auth:
-        username: "{{ .Values.prometheusScrapeHoprdApiToken | b64dec }}"
+        username: __SCRAPE_USERNAME__
         password: ''
       static_configs:
         - targets:

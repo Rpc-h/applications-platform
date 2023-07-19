@@ -9,16 +9,8 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: "45.10.1"
     chart: kube-prometheus-stack
-    # helm:
-    #   fileParameters:
-    #     - name: prometheusScrapeHoprdApiToken
-    #       path: kubectl://?monitoring/secret/prometheus-scrape-auth/jsonpath={.data.HOPRD_API_TOKEN}
     plugin:
       env:
-        - name: HELM_FILE_PARAMETERS
-          value: |
-            - name: prometheusScrapeHoprdApiToken
-              path: kubectl://?monitoring/secret/prometheus-scrape-auth/jsonpath={.data.HOPRD_API_TOKEN}
         - name: HELM_VALUES
           #TODO - grafana adminSecret should be generated on day-1 and not passed to argocd-sugar plugin due to potential security leaks
           value: |
