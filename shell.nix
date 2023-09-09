@@ -16,6 +16,7 @@ mkShell {
     (google-cloud-sdk.withExtraComponents [ google-cloud-sdk.components.gke-gcloud-auth-plugin ])
     kubectl
     kubeseal
+    kubetail
 
     # custom pkg groups
     linuxPkgs
