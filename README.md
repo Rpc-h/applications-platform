@@ -63,7 +63,7 @@ Run the `day-1-destroy` workflow in Github to destroy `day-1`. After successful 
 1. Ensure your administrator has given enough permissions, e.g. your IAM user is assigned with `roles/container.developer` role.
 2. Install Google Cloud CLI as described here: https://cloud.google.com/sdk/docs/install-sdk.
 3. Acquire the cluster related info by running `gcloud container clusters list`.
-4. Follow the instructions on how to access the Kubernetes cluster here: https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl. Run `gcloud auth login` and follow the on-screen instructions and pick the correct Google project. Next run `gcloud  get generate 
+4. Follow the instructions on how to access the Kubernetes cluster here: https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl. Run `gcloud auth login` and follow the on-screen instructions and pick the correct Google project. Next run `gcloud  get generate
 5. Verify you're able to access the cluster and see the nodes by running: `kubectl get nodes`.
 
 ## Applications
@@ -81,7 +81,7 @@ docker run authelia/authelia:latest authelia crypto hash generate argon2 --passw
 
 ### ArgoCD
 
-To retrieve ArgoCD password run: 
+To retrieve ArgoCD password run:
 
 ```shell
 kubectl -n argocd get secrets argocd-initial-admin-secret -o yaml | yq -r '.data["password"]' | base64 -d
@@ -109,5 +109,7 @@ your-another-key=your-another-value
 EOF
 
 kubectl create secret generic -n $NAMESPACE $SECRET_NAME --from-env-file /tmp/env -oyaml --dry-run=client > /tmp/${SECRET_NAME}-secret.yaml
-cat /tmp/${SECRET_NAME}.yaml | kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets | tee /tmp/${SECRET_NAME}-sealed-secret.yaml
+cat /tmp/${SECRET_NAME}.yaml | kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets -oyaml | tee /tmp/${SECRET_NAME}-sealed-secret.yaml
 ```
+
+Now you can copy the sealed-secret file to where you need it.
