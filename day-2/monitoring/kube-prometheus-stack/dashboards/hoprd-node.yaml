@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   labels:
     grafana_dashboard: "1"
+  annotations:
+    grafana-dashboad-folder: HOPR
   name: hoprd-node
   namespace: monitoring
 data:
