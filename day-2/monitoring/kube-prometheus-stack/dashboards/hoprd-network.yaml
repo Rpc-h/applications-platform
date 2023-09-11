@@ -4,7 +4,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
   annotations:
-    grafana-dashboad-folder: HOPR
+    grafana-dashboard-folder: HOPR
   name: hoprd-network
   namespace: monitoring
 data:
