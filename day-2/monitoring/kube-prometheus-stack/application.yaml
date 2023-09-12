@@ -156,6 +156,7 @@ spec:
                     hosts:
                       - grafana.ARGOCD_ENV_DOMAIN
               sidecar:
+                enabled: true
                 dashboards:
                   folderAnnotation: grafana-dashboard-folder
                 provider:
