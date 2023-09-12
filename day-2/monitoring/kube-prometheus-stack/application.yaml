@@ -156,11 +156,11 @@ spec:
                     hosts:
                       - grafana.ARGOCD_ENV_DOMAIN
               sidecar:
-                enabled: true
                 dashboards:
+                  enabled: true
                   folderAnnotation: grafana-dashboard-folder
-                provider:
-                  foldersFromFilesStructure: true
+                  provider:
+                    foldersFromFilesStructure: true
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
