@@ -116,8 +116,9 @@ Now you can copy the sealed-secret file to where you need it.
 
 #### Prometheus
 
-To generate the sealed secret with scrape configs for Prometheus, edit `prometheus-scrape-config.yaml` and then execute:
+To generate the sealed secret execute the following command:
 
 ```shell
-cat prometheus-scrape-config.yaml | kubeseal --controller-namespace=sealed-secrets --controller-name=sealed-secrets -oyaml > ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/prometheus-scrape-config.yaml
+export HOPRD_API_TOKEN=XXXXXX
+sed 's#__SCRAPE_USERNAME__#'"$HOPRD_API_TOKEN"'#g' ./prometheus-scrape-config.yaml | kubeseal --controller-name=sealed-secrets --controller-namespace=sealed-secrets --format yaml > ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/prometheus-scrape-config.yaml
 ```
