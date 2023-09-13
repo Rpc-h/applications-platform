@@ -119,6 +119,5 @@ Now you can copy the sealed-secret file to where you need it.
 To generate the sealed secret with scrape configs for Prometheus, edit `prometheus-scrape-config.yaml` and then execute:
 
 ```shell
-cat prometheus-scrape-config.yaml | kubeseal --controller-namespace=sea
-led-secrets --controller-name=sealed-secrets -oyaml > ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/prometheus-scrape-config.yaml
+cat prometheus-scrape-config.yaml | kubeseal --controller-namespace=sealed-secrets --controller-name=sealed-secrets -oyaml > ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/prometheus-scrape-config.yaml
 ```
