@@ -24,11 +24,11 @@ ssh-keygen -b 2048 -t rsa -f /tmp/id_rsa -q -N "" -C rpch-alligator
 
 We try to keep as little secret variables as possible by design. For the sake of convenience, define the following secrets in your Github secrets section:
 
-- `GOOGLE_APPLICATION_CREDENTIALS` = Base64-encoded GCP service account credentials.
+- `GOOGLE_APPLICATION_CREDENTIALS` = Base64-encoded GCP service account credentials. The values are also stored in Bitwarden (https://vault.bitwarden.com/#/vault?collectionId=27d47d9e-9155-446a-8275-af8600ad0076) under the secret `Terraform Service Account`.
 - `GOOGLE_PROJECT` = GCP project ID.
 - `GOOGLE_REGION` = GCP project default region.
 - `GOOGLE_BUCKET` = GCP bucket for storing Terraform state.
-- `ARGOCD_CREDENTIALS_KEY` = Base64-encoded ArgoCD credentials private key from the previously generated keypair.
+- `ARGOCD_CREDENTIALS_KEY` = Base64-encoded ArgoCD credentials private key from the previously generated keypair. The values are also stored in Bitwarden (https://vault.bitwarden.com/#/vault?collectionId=27d47d9e-9155-446a-8275-af8600ad0076) under the secret `Terraform Service Account`.
 
 ## Non-secret variables
 
