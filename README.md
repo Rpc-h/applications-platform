@@ -8,13 +8,13 @@ This project aims to provide you with a fully-automated Kubernetes platform with
 
 Make sure you have:
 - A Github account with escalated permissions to set secrets.
-- A GCP service account with escalated permissions to create resources. Note: please remove the escalated permissions when done with pipeline steps `day-0` and `day-1` for security reasons.
+- A GCP service account with escalated permissions to create resources. For example, for only the duration of the pipeline, you can attach the service account with `roles/owner` role. Note: please remove the escalated permissions when done with pipeline steps `day-0` and `day-1` for security reasons.
 - A GCP storage bucket for storing Terraform state.
 - GCP APIs enabled:
   - `compute.googleapis.com`
   - `container.googleapis.com`
   - `dns.googleapis.com`
-- A new RSA keypair with no passphrase for ArgoCD to access the Github repo. The public key of this keypair has to be then uploaded to the deploy keys of the repository; the private key has to be set as a secret variable `ARGOCD_CREDENTIALS_KEY`. You can generate the keypair by running:
+- A new RSA keypair with no passphrase for ArgoCD to access the Github repo. The public key of this keypair has to be then uploaded to the deploy keys of the repository; the private key has to be set as a secret variable `ARGOCD_CREDENTIALS_KEY`. This key should not be used by any other service accounts / users; hence do not bother storing this key. You can generate the keypair by running:
 
 ```shell
 ssh-keygen -b 2048 -t rsa -f /tmp/id_rsa -q -N "" -C rpch-alligator
