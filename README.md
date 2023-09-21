@@ -24,11 +24,11 @@ ssh-keygen -b 2048 -t rsa -f /tmp/id_rsa -q -N "" -C rpch-alligator
 
 We try to keep as little secret variables as possible by design. For the sake of convenience, define the following secrets in your Github secrets section:
 
-- `GOOGLE_APPLICATION_CREDENTIALS` = Base64-encoded GCP service account credentials.
+- `GOOGLE_APPLICATION_CREDENTIALS` = Base64-encoded GCP service account credentials. The values are also stored in Bitwarden (https://vault.bitwarden.com/#/vault?collectionId=27d47d9e-9155-446a-8275-af8600ad0076) under the secret `Terraform Service Account`.
 - `GOOGLE_PROJECT` = GCP project ID.
 - `GOOGLE_REGION` = GCP project default region.
 - `GOOGLE_BUCKET` = GCP bucket for storing Terraform state.
-- `ARGOCD_CREDENTIALS_KEY` = Base64-encoded ArgoCD credentials private key from the previously generated keypair.
+- `ARGOCD_CREDENTIALS_KEY` = Base64-encoded ArgoCD credentials private key from the previously generated keypair. The values are also stored in Bitwarden (https://vault.bitwarden.com/#/vault?collectionId=27d47d9e-9155-446a-8275-af8600ad0076) under the secret `Terraform Service Account`.
 
 ## Non-secret variables
 
@@ -43,6 +43,8 @@ TF_VAR_argocd_credentials_url="git@github.com:Rpc-h"
 
 ## Installation
 
+### Github
+
 Run the `day-0-apply` workflow in Github to install `day-0` resources such as:
 - GKE Kubernetes cluster and node pools.
 - IAM service accounts and bindings for the Kubernetes cluster.
@@ -51,6 +53,23 @@ Run the `day-0-apply` workflow in Github to install `day-0` resources such as:
 After successful completion of `day-0-apply`, run the `day-1-apply` workflow in Github to install `day-1` resources such as:
 - ArgoCD helm chart and the initial ArgoCD app-of-apps.
 - IAM service accounts and bindings for `day-2` applications, e.g. `cert-manager`, `external-dns`, etc.
+
+### Local
+
+To run Terraform locally, change into the day you want to run, generate new service account credentials or re-use existing ones, export some env variables and initialize the backend config with the specific bucket:
+
+```shell
+cd day-0 #TODO - change this to the day you want to run
+
+gcloud iam service-accounts keys create credentials.json --iam-account rpch-staging-initial@rpch-375921.iam.gserviceaccount.com
+
+export GOOGLE_APPLICATION_CREDENTIALS=${PWD}/credentials.json
+export TF_VAR_google_project="rpch-375921"
+export TF_VAR_google_region="europe-west6"
+
+terraform init -backend-config="bucket=rpch-alligator-terraform"
+terraform plan
+```
 
 ## Uninstallation
 
