@@ -21,13 +21,13 @@ stringData:
     datasources:
       - name: Postgres - Staging
         type: postgres
-        url: 24-09da4eda-14be-444f-9df8-9305527a4a7d.europe-west6.sql.goog:5432
+        url: 34.65.55.199:5432
         user: postgres
         secureJsonData:
           password: '__POSTGERS_PASSWORD_STAGE__'
         jsonData:
           database: postgres
-          sslmode: verify-full # disable/require/verify-ca/verify-full
+          sslmode: disable # disable/require/verify-ca/verify-full
           maxOpenConns: 100 # Grafana v5.4+
           maxIdleConns: 100 # Grafana v5.4+
           maxIdleConnsAuto: true # Grafana v9.5.1+
