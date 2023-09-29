@@ -35,7 +35,7 @@ data:
       "editable": true,
       "fiscalYearStartMonth": 0,
       "graphTooltip": 0,
-      "id": 27,
+      "id": 54,
       "links": [
         {
           "asDropdown": false,
@@ -125,7 +125,7 @@ data:
             },
             "textMode": "auto"
           },
-          "pluginVersion": "9.4.7",
+          "pluginVersion": "10.1.2",
           "targets": [
             {
               "datasource": {
@@ -214,7 +214,7 @@ data:
             },
             "textMode": "auto"
           },
-          "pluginVersion": "9.4.7",
+          "pluginVersion": "10.1.2",
           "targets": [
             {
               "datasource": {
@@ -238,7 +238,7 @@ data:
         {
           "datasource": {
             "type": "postgres",
-            "uid": "OHQDuUmSk"
+            "uid": "PF951AEA0F4DBBB20"
           },
           "fieldConfig": {
             "defaults": {
@@ -288,16 +288,16 @@ data:
             "showThresholdLabels": false,
             "showThresholdMarkers": true
           },
-          "pluginVersion": "9.4.7",
+          "pluginVersion": "10.1.2",
           "targets": [
             {
               "datasource": {
                 "type": "postgres",
-                "uid": "OHQDuUmSk"
+                "uid": "PF951AEA0F4DBBB20"
               },
               "editorMode": "builder",
               "format": "table",
-              "rawSql": "SELECT COUNT(*) FROM zero_hop_pairings LIMIT 50 ",
+              "rawSql": "SELECT COUNT(entry_id) FROM zero_hop_pairings LIMIT 50 ",
               "refId": "A",
               "sql": {
                 "columns": [
@@ -305,7 +305,7 @@ data:
                     "name": "COUNT",
                     "parameters": [
                       {
-                        "name": "*",
+                        "name": "entry_id",
                         "type": "functionParameter"
                       }
                     ],
@@ -352,6 +352,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 3,
@@ -481,7 +482,7 @@ data:
         {
           "datasource": {
             "type": "postgres",
-            "uid": "sQe2zVrVz"
+            "uid": "PAC20BE1BB66B3ECB"
           },
           "fieldConfig": {
             "defaults": {
@@ -531,16 +532,16 @@ data:
             "showThresholdLabels": false,
             "showThresholdMarkers": true
           },
-          "pluginVersion": "9.4.7",
+          "pluginVersion": "10.1.2",
           "targets": [
             {
               "datasource": {
                 "type": "postgres",
-                "uid": "sQe2zVrVz"
+                "uid": "PAC20BE1BB66B3ECB"
               },
               "editorMode": "builder",
               "format": "table",
-              "rawSql": "SELECT COUNT(*) FROM zero_hop_pairings LIMIT 50 ",
+              "rawSql": "SELECT COUNT(entry_id) FROM zero_hop_pairings LIMIT 50 ",
               "refId": "A",
               "sql": {
                 "columns": [
@@ -548,7 +549,7 @@ data:
                     "name": "COUNT",
                     "parameters": [
                       {
-                        "name": "*",
+                        "name": "entry_id",
                         "type": "functionParameter"
                       }
                     ],
@@ -596,6 +597,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -716,6 +718,7 @@ data:
                   "tooltip": false,
                   "viz": false
                 },
+                "insertNulls": false,
                 "lineInterpolation": "linear",
                 "lineWidth": 1,
                 "pointSize": 5,
@@ -995,7 +998,7 @@ data:
       "timezone": "",
       "title": "Latency monitor",
       "uid": "etzo-_aVz",
-      "version": 77,
+      "version": 2,
       "weekStart": ""
     }
 
