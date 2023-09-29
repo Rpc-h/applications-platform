@@ -113,6 +113,12 @@ spec:
                       resources:
                         requests:
                           storage: 100Gi
+                ## scrapeConfigs to be selected for target discovery.
+                ## If {}, select all scrapeConfigs
+                ##
+                scrapeConfigSelector: {}
+                ## If nil, select own namespace. Namespaces to be selected for scrapeConfig discovery.
+                scrapeConfigNamespaceSelector: {}
                 additionalScrapeConfigsSecret:
                   enabled: true
                   name: prometheus-scrape-config
