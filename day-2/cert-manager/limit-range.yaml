@@ -1,16 +1,16 @@
-apiVersion: v1
-kind: LimitRange
-metadata:
-  name: cert-manager
-  namespace: cert-manager
-spec:
-  #Set limit range because resource quotas are defined and pods
-  #without specified limits for containers will fail to create.
-  limits:
-    - defaultRequest: #default requests
-        cpu: 10m
-        memory: 16Mi
-      default: #default limits
-        cpu: 10m
-        memory: 16Mi
-      type: Container
+# apiVersion: v1
+# kind: LimitRange
+# metadata:
+#   name: cert-manager
+#   namespace: cert-manager
+# spec:
+#   #Set limit range because resource quotas are defined and pods
+#   #without specified limits for containers will fail to create.
+#   limits:
+#     - defaultRequest: #default requests
+#         cpu: 10m
+#         memory: 16Mi
+#       default: #default limits
+#         cpu: 10m
+#         memory: 16Mi
+#       type: Container

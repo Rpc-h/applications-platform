@@ -28,43 +28,43 @@ spec:
               capabilities:
                 drop:
                   - ALL
-            resources:
-              requests:
-                cpu: 10m
-                memory: 32Mi
-              limits:
-                cpu: 10m
-                memory: 64Mi
             prometheus:
               enabled: true
               servicemonitor:
                 enabled: true
+            resources:
+              limits:
+                cpu: 500m
+                memory: 256Mi
+              requests:
+                cpu: 250m
+                memory: 128Mi
             webhook:
               networkPolicy:
                 enabled: true
               resources:
-                requests:
-                  cpu: 10m
-                  memory: 16Mi
                 limits:
-                  cpu: 10m
-                  memory: 32Mi
+                  cpu: 500m
+                  memory: 128Mi
+                requests:
+                  cpu: 250m
+                  memory: 64Mi
             cainjector:
               resources:
-                requests:
-                  cpu: 10m
-                  memory: 128Mi
                 limits:
-                  cpu: 20m
-                  memory: 256Mi
+                  cpu: 500m
+                  memory: 512Mi
+                requests:
+                  cpu: 250m
+                  memory: 128Mi
             startupapicheck:
               resources:
-                requests:
-                  cpu: 10m
-                  memory: 16Mi
                 limits:
-                  cpu: 10m
-                  memory: 16Mi
+                  cpu: 500m
+                  memory: 512Mi
+                requests:
+                  cpu: 250m
+                  memory: 128Mi
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
