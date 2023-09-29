@@ -13,7 +13,8 @@ spec:
       env:
         - name: HELM_VALUES
           value: |
-            extraEnvVarsSecret: notification-service
+            matrix:
+              secretReferenceKey: notification-service
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
