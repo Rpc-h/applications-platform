@@ -21,7 +21,7 @@ stringData:
     datasources:
       - name: Postgres - Staging
         type: postgres
-        url: 34.65.55.199:5432
+        url: postgres.staging.rpch.tech:5432
         user: postgres
         secureJsonData:
           password: '__POSTGERS_PASSWORD_STAGE__'
@@ -36,7 +36,7 @@ stringData:
           timescaledb: false
       - name: Postgres - Production
         type: postgres
-        url: 34.65.199.249:5432
+        url: postgres.production.rpch.tech:5432
         user: postgres
         secureJsonData:
           password: '__POSTGERS_PASSWORD_PROD__'
