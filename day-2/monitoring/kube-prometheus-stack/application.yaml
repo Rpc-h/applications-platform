@@ -14,6 +14,8 @@ spec:
         - name: HELM_VALUES
           #TODO - grafana adminSecret should be generated on day-1 and not passed to argocd-sugar plugin due to potential security leaks
           value: |
+            crds:
+              enabled: true
             coreDns:
               enabled: false
             kubeDns:
