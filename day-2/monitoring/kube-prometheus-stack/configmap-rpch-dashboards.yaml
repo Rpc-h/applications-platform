@@ -2934,7 +2934,7 @@ data:
       "weekStart": ""
     }
 
-  logs general.json: |
+  logs-general.json: |
     {
       "annotations": {
         "list": [
