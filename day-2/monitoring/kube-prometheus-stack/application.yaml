@@ -132,6 +132,15 @@ spec:
                   type: loki
                   url: http://loki-read.monitoring:3100
                   isDefault: false
+              sidecar:
+                dashboards:
+                  # If specified, the sidecar will look for annotation with this name to create folder and put graph here.
+                  # You can use this parameter together with `provider.foldersFromFilesStructure`to annotate configmaps and create folder structure.
+                  folderAnnotation: grafana-dashboard-folder
+                  provider:
+                    allowUiUpdates: true
+                    foldersFromFilesStructure: true
+                    disableDeletion: true
               grafana.ini:
                 server:
                   root_url: https://grafana.ARGOCD_ENV_DOMAIN
