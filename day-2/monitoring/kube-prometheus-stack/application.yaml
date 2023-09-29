@@ -120,7 +120,7 @@ spec:
                 ##
                 scrapeConfigSelector: {}
                 ## If nil, select own namespace. Namespaces to be selected for scrapeConfig discovery.
-                scrapeConfigNamespaceSelector: {}
+                # scrapeConfigNamespaceSelector: {}
                 additionalScrapeConfigsSecret:
                   enabled: true
                   name: prometheus-scrape-config
