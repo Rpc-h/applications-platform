@@ -169,7 +169,7 @@ spec:
                   api_url: https://www.googleapis.com/oauth2/v1/userinfo
                   allowed_domains: hoprnet.org
                 dashboards:
-                  default_home_dashboard_path:  /tmp/dashboards/RPCh/latency-monitor.json
+                  default_home_dashboard_path:  /tmp/dashboards/RPCh/main.json
               ingress:
                 enabled: true
                 ingressClassName: traefik
