@@ -866,7 +866,7 @@ data:
               }
             }
           ],
-          "title": "Rpch segments outgoing rate",
+          "title": "Rpch segments outgoing rate per minute",
           "type": "timeseries"
         }
       ],

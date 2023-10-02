@@ -69,13 +69,13 @@ spec:
                   - name: "null"
                   - name: "info"
                     webhook_configs:
-                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21DaMkbMrexCDEDGoiup:hoprnet.io"
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21tHvIszqeSKXOvcjcbR:hoprnet.io"
                   - name: "warning"
                     webhook_configs:
-                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21WxXYnjzPyglBADfuyc:hoprnet.io"
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21tHvIszqeSKXOvcjcbR:hoprnet.io"
                   - name: "critical"
                     webhook_configs:
-                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21HgRjXaMRVLzZYZPEFg:hoprnet.io"
+                      - url: "http://notification-service.monitoring:8080/alertmanager/room/%21tHvIszqeSKXOvcjcbR:hoprnet.io"
                   - name: "telegram"
                     telegram_configs:
                       - chat_id: -1001562396359
