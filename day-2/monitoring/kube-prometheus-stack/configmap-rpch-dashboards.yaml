@@ -2593,7 +2593,7 @@ data:
             "uid": "P8E80F9AEF21F6940"
           },
           "gridPos": {
-            "h": 10,
+            "h": 16,
             "w": 24,
             "x": 0,
             "y": 0
@@ -2616,7 +2616,7 @@ data:
                 "uid": "P8E80F9AEF21F6940"
               },
               "editorMode": "code",
-              "expr": "{hostname=~\"$node\"}",
+              "expr": "{hostname=~\".+$node\"} |~ \"$search\"",
               "queryType": "range",
               "refId": "A"
             },
@@ -2626,7 +2626,7 @@ data:
                 "uid": "P8E80F9AEF21F6940"
               },
               "editorMode": "code",
-              "expr": " {hostname=~\"$node_hidden\"}",
+              "expr": " {hostname=~\"$node_hidden\"} |~ \"$search\"",
               "hide": false,
               "queryType": "range",
               "refId": "B"
@@ -2645,8 +2645,8 @@ data:
           {
             "current": {
               "selected": false,
-              "text": "production",
-              "value": "production"
+              "text": "",
+              "value": ""
             },
             "datasource": {
               "type": "prometheus",
@@ -2672,8 +2672,8 @@ data:
           {
             "current": {
               "selected": false,
-              "text": "production-0",
-              "value": "production-0"
+              "text": "",
+              "value": ""
             },
             "datasource": {
               "type": "prometheus",
@@ -2698,8 +2698,8 @@ data:
           {
             "current": {
               "selected": false,
-              "text": "12D3KooWL9LzhMKX9sAFqUPytHGUyUyr3mZgDCCHYqRu6kRqC1f9",
-              "value": "12D3KooWL9LzhMKX9sAFqUPytHGUyUyr3mZgDCCHYqRu6kRqC1f9"
+              "text": "",
+              "value": ""
             },
             "datasource": {
               "type": "prometheus",
@@ -2724,8 +2724,27 @@ data:
           {
             "current": {
               "selected": false,
-              "text": "production-0",
-              "value": "production-0"
+              "text": "",
+              "value": ""
+            },
+            "hide": 0,
+            "name": "search",
+            "options": [
+              {
+                "selected": true,
+                "text": "",
+                "value": ""
+              }
+            ],
+            "query": "",
+            "skipUrlSync": false,
+            "type": "textbox"
+          },
+          {
+            "current": {
+              "selected": false,
+              "text": "",
+              "value": ""
             },
             "datasource": {
               "type": "prometheus",
@@ -2757,7 +2776,7 @@ data:
       "timezone": "",
       "title": "Rpch Node Details",
       "uid": "c117a33c-9cfe-4199-b9a7-f865652d3903",
-      "version": 15,
+      "version": 20,
       "weekStart": ""
     }
 
