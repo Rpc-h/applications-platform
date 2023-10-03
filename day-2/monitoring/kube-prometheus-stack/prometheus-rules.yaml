@@ -15,7 +15,7 @@ spec:
         description: "{{ $value }} latencies failures identified"
         #runbook_url: 
         summary: Production latency is lower than expected
-      expr: avg(increase(rpch_latencies_success_count{namespace="production"}[1m])) > 3
+      expr: avg(increase(rpch_latencies_success_count{namespace="production"}[1m])) > 70
       for: 1m
       labels:
         severity: critical
