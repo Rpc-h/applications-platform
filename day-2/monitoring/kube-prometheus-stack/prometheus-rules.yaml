@@ -16,7 +16,7 @@ spec:
         #runbook_url: 
         summary: Production latency is lower than expected
       expr: avg(increase(rpch_latencies_failure_count{namespace="production"}[1m])) > 3
-      for: 1m
+      for: 5m
       labels:
         severity: critical
         environment: production
