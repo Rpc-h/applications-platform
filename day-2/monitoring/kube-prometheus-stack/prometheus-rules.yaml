@@ -3,9 +3,8 @@ kind: PrometheusRule
 metadata:
   annotations:
     prometheus-operator-validated: "true"
-  labels:
-    prometheus_rule: "true"
   name: rpch-rules
+  namespace: monitoring
 spec:
   groups:
   - name: rpch
