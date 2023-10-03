@@ -117,6 +117,9 @@ spec:
                   enabled: true
                   name: prometheus-scrape-config
                   key: additional-scrape-configs.yaml
+                ruleSelector:
+                  matchLabels:
+                    prometheus_rule: "true"
             grafana:
               enabled: true
               adminPassword: ARGOCD_ENV_RANDOM_STRING

@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    prometheus-operator-validated: "true"
+  labels:
+    prometheus_rule: "true"
+  name: rpch-rules
+spec:
+  groups:
+  - name: rpch
+    rules:
+    - alert: rpch_latency
+      annotations:
+        description: There are {{`{{`}}  $value {{`}}`}} latencies failures identified
+        #runbook_url: 
+        summary: Production latency is lower than expected
+      expr: avg(increase(rpch_latencies_success_count{namespace="production"}[1m])) > 3
+      for: 1m
+      labels:
+        severity: critical
+        environment: production
