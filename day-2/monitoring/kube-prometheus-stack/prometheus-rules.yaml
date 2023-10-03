@@ -12,7 +12,7 @@ spec:
     rules:
     - alert: rpch_latency
       annotations:
-        description: There are {{`{{`}}  $value {{`}}`}} latencies failures identified
+        description: There are {{ $value }} latencies failures identified - {{ $values }}
         #runbook_url: 
         summary: Production latency is lower than expected
       expr: avg(increase(rpch_latencies_success_count{namespace="production"}[1m])) > 3
