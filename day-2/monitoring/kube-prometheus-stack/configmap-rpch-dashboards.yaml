@@ -666,8 +666,7 @@ data:
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -776,8 +775,7 @@ data:
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -879,7 +877,7 @@ data:
         "list": [
           {
             "current": {
-              "selected": true,
+              "selected": false,
               "text": "Postgres - Production",
               "value": "PAC20BE1BB66B3ECB"
             },
@@ -932,7 +930,7 @@ data:
       "timezone": "",
       "title": "Main",
       "uid": "f6343933-5482-4fe3-81e3-136202ab5452",
-      "version": 12,
+      "version": 5,
       "weekStart": ""
     }
 
@@ -3632,175 +3630,6 @@ data:
       "title": "Logs",
       "uid": "liz0yRCZz",
       "version": 52,
-      "weekStart": ""
-    }
-
-  logs-external.json: |
-    {
-      "annotations": {
-        "list": [
-          {
-            "builtIn": 1,
-            "datasource": {
-              "type": "grafana",
-              "uid": "-- Grafana --"
-            },
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "target": {
-              "limit": 100,
-              "matchAny": false,
-              "tags": [],
-              "type": "dashboard"
-            },
-            "type": "dashboard"
-          }
-        ]
-      },
-      "editable": true,
-      "fiscalYearStartMonth": 0,
-      "graphTooltip": 0,
-      "id": 290,
-      "links": [],
-      "liveNow": false,
-      "panels": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "gridPos": {
-            "h": 26,
-            "w": 24,
-            "x": 0,
-            "y": 0
-          },
-          "id": 3,
-          "options": {
-            "dedupStrategy": "none",
-            "enableLogDetails": true,
-            "prettifyLogMessage": false,
-            "showCommonLabels": false,
-            "showLabels": false,
-            "showTime": true,
-            "sortOrder": "Descending",
-            "wrapLogMessage": false
-          },
-          "targets": [
-            {
-              "datasource": {
-                "type": "loki",
-                "uid": "P8E80F9AEF21F6940"
-              },
-              "editorMode": "code",
-              "expr": "{hostname=\"$hostname\", container=\"$container\"} |~ \"(?i)$search\"",
-              "hide": false,
-              "maxLines": 1000,
-              "queryType": "range",
-              "refId": "A"
-            }
-          ],
-          "title": "Logs based on the hostname, container, and search phrase",
-          "type": "logs"
-        }
-      ],
-      "refresh": "10s",
-      "revision": 1,
-      "schemaVersion": 38,
-      "style": "dark",
-      "tags": [],
-      "templating": {
-        "list": [
-          {
-            "current": {
-              "selected": false,
-              "text": "hetzner-staging-alpha-1",
-              "value": "hetzner-staging-alpha-1"
-            },
-            "datasource": {
-              "type": "loki",
-              "uid": "P8E80F9AEF21F6940"
-            },
-            "definition": "",
-            "hide": 0,
-            "includeAll": false,
-            "multi": false,
-            "name": "hostname",
-            "options": [],
-            "query": {
-              "label": "hostname",
-              "refId": "LokiVariableQueryEditor-VariableQuery",
-              "stream": "",
-              "type": 1
-            },
-            "refresh": 2,
-            "regex": "",
-            "skipUrlSync": false,
-            "sort": 1,
-            "type": "query"
-          },
-          {
-            "current": {
-              "selected": false,
-              "text": "alertmanager",
-              "value": "alertmanager"
-            },
-            "datasource": {
-              "type": "loki",
-              "uid": "P8E80F9AEF21F6940"
-            },
-            "definition": "",
-            "hide": 0,
-            "includeAll": false,
-            "multi": false,
-            "name": "container",
-            "options": [],
-            "query": {
-              "label": "container",
-              "refId": "LokiVariableQueryEditor-VariableQuery",
-              "stream": "",
-              "type": 1
-            },
-            "refresh": 2,
-            "regex": "",
-            "skipUrlSync": false,
-            "sort": 1,
-            "type": "query"
-          },
-          {
-            "current": {
-              "selected": true,
-              "text": "",
-              "value": ""
-            },
-            "description": "Search...",
-            "hide": 0,
-            "label": "",
-            "name": "search",
-            "options": [
-              {
-                "selected": true,
-                "text": "",
-                "value": ""
-              }
-            ],
-            "query": "",
-            "skipUrlSync": false,
-            "type": "textbox"
-          }
-        ]
-      },
-      "time": {
-        "from": "now-6h",
-        "to": "now"
-      },
-      "timepicker": {},
-      "timezone": "",
-      "title": "Logs external",
-      "uid": "EGy1XJE4z",
-      "version": 19,
       "weekStart": ""
     }
 
