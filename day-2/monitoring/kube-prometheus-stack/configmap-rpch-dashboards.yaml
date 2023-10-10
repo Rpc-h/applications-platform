@@ -456,7 +456,7 @@ data:
               "editorMode": "code",
               "format": "time_series",
               "rawQuery": true,
-              "rawSql": "SELECT DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)) as time, v.code, count(rv.voucher_id ) as PromotionCode\nFROM redeemed_vouchers as rv \nLEFT JOIN vouchers as v ON (rv.voucher_id = v.id)\nWHERE rv.\"createdAt\" > $__timeFrom() AND rv.\"createdAt\" < $__timeTo() \nGROUP BY DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)), v.code ORDER BY 1",
+              "rawSql": "SELECT DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)) as time, v.code, count(rv.voucher_id ) as PromotionCode\nFROM redeemed_vouchers as rv \nLEFT JOIN vouchers as v ON (rv.voucher_id = v.id)\nWHERE rv.\"createdAt\" > $__timeFrom() AND rv.\"createdAt\" < $__timeTo() \nGROUP BY DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)), v.code\nORDER BY 1",
               "refId": "A",
               "sql": {
                 "columns": [
