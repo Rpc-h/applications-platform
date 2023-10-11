@@ -8,7 +8,7 @@ spec:
   source:
     #TODO - do not hardcode
     repoURL: https://github.com/Rpc-h/applications
-    targetRevision: ausias/one-hop
+    targetRevision: main
     path: staging
     plugin:
       env:
