@@ -90,6 +90,10 @@ resource "google_container_cluster" "main" {
     }
   }
 
+  vertical_pod_autoscaling {
+    enabled = true
+  }
+
   #Enable if you want to have metrics + logs on GCP
   #  logging_config {
   #    enable_components = [

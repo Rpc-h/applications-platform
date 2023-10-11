@@ -186,6 +186,12 @@ spec:
                   - secretName: grafana-cert
                     hosts:
                       - grafana.ARGOCD_ENV_DOMAIN
+              sidecar:
+                dashboards:
+                  enabled: true
+                  folderAnnotation: grafana-dashboard-folder
+                  provider:
+                    foldersFromFilesStructure: true
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
