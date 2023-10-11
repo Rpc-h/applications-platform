@@ -1,0 +1,51 @@
+##
+## To generate the sealed secret execute the following command:
+##  ```
+##    export POSTGERS_PASSWORD_STAGE=XXXXXX
+##    export POSTGERS_PASSWORD_PROD=XXXXXX
+##    sed -e 's#__POSTGERS_PASSWORD_STAGE__#'"$POSTGERS_PASSWORD_STAGE"'#g' -e 's#__POSTGERS_PASSWORD_PROD__#'"$POSTGERS_PASSWORD_PROD"'#g' ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/postgres-datasources.yaml.j2 | kubeseal --controller-name=sealed-secrets --controller-namespace=sealed-secrets --format yaml > ./day-2/monitoring/kube-prometheus-stack/sealed-secrets/postgres-datasources.yaml
+##
+##  ```
+##
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-datasources
+  labels:
+    grafana_datasource: "1"
+  namespace: monitoring
+stringData:
+  postgres.yaml: |-
+    apiVersion: 1
+    datasources:
+      - name: Postgres - Staging
+        type: postgres
+        url: 34.65.55.199:5432
+        user: postgres
+        secureJsonData:
+          password: '__POSTGERS_PASSWORD_STAGE__'
+        jsonData:
+          database: postgres
+          sslmode: disable # disable/require/verify-ca/verify-full
+          maxOpenConns: 100 # Grafana v5.4+
+          maxIdleConns: 100 # Grafana v5.4+
+          maxIdleConnsAuto: true # Grafana v9.5.1+
+          connMaxLifetime: 14400 # Grafana v5.4+
+          postgresVersion: 1409 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
+          timescaledb: false
+      - name: Postgres - Production
+        type: postgres
+        url: 34.65.199.249:5432
+        user: postgres
+        secureJsonData:
+          password: '__POSTGERS_PASSWORD_PROD__'
+        jsonData:
+          database: postgres
+          sslmode: disable # disable/require/verify-ca/verify-full
+          maxOpenConns: 100 # Grafana v5.4+
+          maxIdleConns: 100 # Grafana v5.4+
+          maxIdleConnsAuto: true # Grafana v9.5.1+
+          connMaxLifetime: 14400 # Grafana v5.4+
+          postgresVersion: 1409 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
+          timescaledb: false

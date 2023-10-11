@@ -23,154 +23,304 @@ stringData:
         - targets:
             - "78.47.150.194:3001"
           labels:
-            hostname: "hetzner-staging-alpha-01"
+            service: entry-node
             job: "hetzner-staging-alpha-1"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-1"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWNe4N2isa7V4T9YhBxuPCb8jAdQWMQXSHRsHAXBKgAENs
+            hoprd_address: 0xeced17c48f6b9cfe446132152ec08788e4b4279d
         - targets:
             - "91.107.194.8:3001"
           labels:
-            hostname: "hetzner-staging-alpha-02"
+            service: entry-node
             job: "hetzner-staging-alpha-2"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-2"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWGzvwfnfiM8obDc1DKc6R1xU36ySnjc3UFiRCt1fsnBXo
+            hoprd_address: 0xe756a48e0f7c8631a00fdd6daca8fa9753bb1435
         - targets:
             - "49.12.246.83:3001"
           labels:
-            hostname: "hetzner-staging-alpha-03"
+            service: entry-node
             job: "hetzner-staging-alpha-3"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-3"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWPp18qnLofr1NonMBH8uefHcpcVUoJb3BXbQ3vezC7krg
+            hoprd_address: 0xbd2b7b4d3f4654ac4c74380aa164ae2a9354f590
         - targets:
             - "159.69.122.70:3001"
           labels:
-            hostname: "hetzner-staging-alpha-04"
+            service: entry-node
             job: "hetzner-staging-alpha-4"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-4"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWRQ1E9GGTZNpHDJyhpFbQ2mreCbgchoiEH2Ab67or7M3R
+            hoprd_address: 0xff00fd9d3a637edb9e79be38c928d4c047902778
         - targets:
             - "142.132.184.57:3001"
           labels:
-            hostname: "hetzner-staging-alpha-05"
+            service: entry-node
             job: "hetzner-staging-alpha-5"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-5"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCMZAbZHhF16G4UaLx43Dmmbquxb9k2pEr5HPB3DiM8G7
+            hoprd_address: 0x3d725baabd667bfb038d57e06853a3fdefde3544
         - targets:
             - "128.140.52.34:3001"
           labels:
-            hostname: "hetzner-staging-alpha-06"
+            service: entry-node
             job: "hetzner-staging-alpha-6"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-6"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWR59W4etXE6yBiNPiRM4XDUY2NDichMajVmxHrZwL8tZJ
+            hoprd_address: 0xf1829e6b819041be7d8f5c1d4aafadc7f1566e24
         - targets:
             - "116.203.251.244:3001"
           labels:
-            hostname: "hetzner-staging-alpha-07"
+            service: entry-node
             job: "hetzner-staging-alpha-7"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-7"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWJSqDxGfpLhb5noYF5M8pG4pXRSZkszak3DN79nWsuZ2U
+            hoprd_address: 0x11b2acb1dd259368acca923f915c1b46a141d01b
         - targets:
             - "49.12.13.222:3001"
           labels:
-            hostname: "hetzner-staging-alpha-08"
+            service: entry-node
             job: "hetzner-staging-alpha-8"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-8"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWAuKmJAyLrjS7ejtvEGyanmVzsVxHZMqjmyQmUhKsMavA
+            hoprd_address: 0xd37c45dd951b326148c9613a73c692a3a2144255
         - targets:
             - "49.13.13.52:3001"
           labels:
-            hostname: "hetzner-staging-alpha-09"
+            service: entry-node
             job: "hetzner-staging-alpha-9"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-9"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWNsW2L3tjmYzXvYvRmk5iLZCu5P8giNBou2AcfPyJxQpy
+            hoprd_address: 0x732e39520f0674f290c0016105d03982977c1677
         - targets:
             - "49.13.13.55:3001"
           labels:
-            hostname: "hetzner-staging-alpha-10"
+            service: entry-node
             job: "hetzner-staging-alpha-10"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-10"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCextLu2LF2sJ1rDAVR93krfHMSv6UqrnuLzJax98Hftv
+            hoprd_address: 0x5a724a41b722ac7c07c9c1fbe1645e478920dc3f
         - targets:
             - "91.107.205.15:3001"
           labels:
-            hostname: "hetzner-staging-alpha-11"
+            service: exit-node
             job: "hetzner-staging-alpha-11"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-11"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWAsLqUwdAqYuaDNEqAwZToiGXa7PKF73RhNgAHKHnhndt
+            hoprd_address: 0xb26d8068c9a2412b6a3f4b765986037a1a815103
         - targets:
             - "49.13.13.104:3001"
           labels:
-            hostname: "hetzner-staging-alpha-12"
+            service: exit-node
             job: "hetzner-staging-alpha-12"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-12"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWKBYQK36RfNDvWyxLJms4rPypckQBwEokraTNd6gacnaf
+            hoprd_address: 0xfd9894dd423fbdfcc18cddd416f4513e9624ee32
         - targets:
             - "49.13.13.114:3001"
           labels:
-            hostname: "hetzner-staging-alpha-13"
+            service: exit-node
             job: "hetzner-staging-alpha-13"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-13"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWJ1m6KxHTNbkH24oo3mszuKxfPggYHRXSGTEGp42to3sd
+            hoprd_address: 0x3920892ef78e62fcc26c5ce1b598b045b97e3aaa
         - targets:
             - "49.13.13.117:3001"
           labels:
-            hostname: "hetzner-staging-alpha-14"
+            service: exit-node
             job: "hetzner-staging-alpha-14"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-14"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWNq3AjDKgqyyQxHKD8MxBf8ikGvfhk8npWX2y5TvWA6cQ
+            hoprd_address: 0x88345f5341c0e27b3c7a8f7fe5d29b56f3e521d4
         - targets:
             - "49.13.13.106:3001"
           labels:
-            hostname: "hetzner-staging-alpha-15"
+            service: exit-node
             job: "hetzner-staging-alpha-15"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-15"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWMf2Tw6beVpZYVwBgb6gzGDnQp8Fh1V9ZkisW2L92THNF
+            hoprd_address: 0x5e7ab9cbd3d9ab669aa1c593d6c3a172ffca9ec7
         - targets:
            - "95.217.234.91:3001"
           labels:
-            hostname: "hetzner-staging-alpha-16"
+            service: exit-node
             job: "hetzner-staging-alpha-16"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-16"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBegPJotpGcV4tJXqRsASs5k3nzXvyxTcpoT97HeqsVLL
+            hoprd_address: 0x20c4d0e1610e41f3e9a81d55eb0c136a5f66c2d6
         - targets:
             - "65.21.54.172:3001"
           labels:
-            hostname: "hetzner-staging-alpha-17"
+            service: exit-node
             job: "hetzner-staging-alpha-17"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-17"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBsGxZZJ4ae8qrDt5apzwRofC9ersbbjNMGzs7vysESPW
+            hoprd_address: 0x363a9488967ae3c38661ca627c402d3990ad084b
         - targets:
             - "135.181.156.126:3001"
           labels:
-            hostname: "hetzner-staging-alpha-18"
+            service: exit-node
             job: "hetzner-staging-alpha-18"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-18"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWAkQAoZcxpGGzdDUc37EtuoNsWx4gegEwTdG39Q5BFnaB
+            hoprd_address: 0xad30a4ec22a7d2771dec712295d1c66dcaa338f7
         - targets:
             - "135.181.87.129:3001"
           labels:
-            hostname: "hetzner-staging-alpha-19"
+            service: exit-node
             job: "hetzner-staging-alpha-19"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-19"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWA7ifmGt4oK1qXmPLqPJK77AYk7Nw5pSAsBtz1FKtRjnT
+            hoprd_address: 0x906d27952f5dfdeaa562e429d08013968eea681e
         - targets:
             - "135.181.207.234:3001"
           labels:
-            hostname: "hetzner-staging-alpha-20"
+            service: exit-node
             job: "hetzner-staging-alpha-20"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-20"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWJ5fZzhVmpVVx4CCmKMd5zEPJmMoWLWQQbS42AF3o7oW9
+            hoprd_address: 0xd560ea27d40302a667d7872a79e650f4f5e47926
         - targets:
             - "37.27.7.199:3001"
           labels:
-            hostname: "hetzner-staging-alpha-21"
+            service: exit-node
             job: "hetzner-staging-alpha-21"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-21"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBQLneNzeGBHpu6yUCo7YrK3UV7iTfqzPhu7MU5wncJtS
+            hoprd_address: 0x840d0fbaa1d92cabc2e810355f69b8b900658646
         - targets:
            - "135.181.101.184:3001"
           labels:
-            hostname: "hetzner-staging-alpha-22"
+            service: exit-node
             job: "hetzner-staging-alpha-22"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-22"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWDu7CWqYebNB8kNrCJKyp9xacpw4Ab39bc4PnbymSQG5f
+            hoprd_address: 0x78d294676bbd9030c6ff83899d4d42723a5ff71f
         - targets:
             - "95.217.133.151:3001"
           labels:
-            hostname: "hetzner-staging-alpha-23"
+            service: exit-node
             job: "hetzner-staging-alpha-23"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-23"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWQEtGq8DbK6LVLN9UFfYjsxyWAYecEA71x9mf8AU295K9
+            hoprd_address: 0x0de9a4482f6fea7c83d099cbf0e339207c0dd386
         - targets:
             - "95.217.161.46:3001"
           labels:
-            hostname: "hetzner-staging-alpha-24"
+            service: exit-node
             job: "hetzner-staging-alpha-24"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-24"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWMHHVdet5Yi7cJwMjHwsrPyXAWTnWGk9vpep6zx5jLSJ3
+            hoprd_address: 0xe57f5e26ccd25aed862d03956d169e4af5b587e4
         - targets:
            - "37.27.18.179:3001"
           labels:
-            hostname: "hetzner-staging-alpha-25"
+            service: exit-node
             job: "hetzner-staging-alpha-25"
-            hoprd_network: monte_rosa
-    - job_name: production-hoprd-metrics
+            node: "hetzner-staging-alpha-25"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWD2fDM2t6bs7GpPjvbDETsKo3g5VCDvCdhrTjJsM95gsL
+            hoprd_address: 0x0ff99382b671eb888bf7fd9f5c2bc7e2b2260c07
+    - job_name: hetzner-production-hoprd-metrics
       metrics_path: /api/v3/node/metrics
       basic_auth:
         username: __SCRAPE_USERNAME__
@@ -179,504 +329,954 @@ stringData:
         - targets:
             - "95.217.237.141:3001"
           labels:
-            hostname: "production-0"
-            job: "production-0"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-0
+            node: production-0
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWL9LzhMKX9sAFqUPytHGUyUyr3mZgDCCHYqRu6kRqC1f9
+            hoprd_address: 0x4c3af075e46a143e0829991e6acc84629173e503
         - targets:
             - "135.181.92.114:3001"
           labels:
-            hostname: "production-1"
-            job: "production-1"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-1
+            node: production-1
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWSGvn7VGFe2T5xzbr6g7KHFYieNgGK54nTQb5jhe65dQE
+            hoprd_address: 0x289a1f807105f4c463f92c5b3b89d091b37d4905
         - targets:
             - "135.181.80.245:3001"
           labels:
-            hostname: "production-2"
-            job: "production-2"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-2
+            node: production-2
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWQUbohvkJPseZGjXUQATXAMpNfx9SjC7e9jNRx5k7EzXJ
+            hoprd_address: 0x2211494cc3086b9f4f2e30dbbdab9ab9349c8793
         - targets:
             - "135.181.107.160:3001"
           labels:
-            hostname: "production-3"
-            job: "production-3"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-3
+            node: production-3
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWKw5BnTpPMk82qbkRcLiJCrwdZYTiWquP4Tej9W93df8D
+            hoprd_address: 0xd3c824660a782411d455fbe821ec788f0c271fe2
         - targets:
             - "135.181.82.212:3001"
           labels:
-            hostname: "production-4"
-            job: "production-4"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-4
+            node: production-4
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWHCL9d8CrAhjLNLWqjHGK4PGzPmEAj81Pmsc9bz6uiaJz
+            hoprd_address: 0x70ccc45fc99891ee21f8c10a9632c37f133607a5
         - targets:
             - "95.217.215.176:3001"
           labels:
-            hostname: "production-5"
-            job: "production-5"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-5
+            node: production-5
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCw9aUj9dm44hdxGTh9Vp74sCMvnTradkG932Qt5fcK9W
+            hoprd_address: 0xbe70ec1397ba69fee4f152038d9dd42acaa60691
         - targets:
             - "65.108.216.137:3001"
           labels:
-            hostname: "production-6"
-            job: "production-6"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-6
+            node: production-6
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWDfRepVqhth71M6UXaPzSmaSDha3pQEGrDA1CXr3cw8qa
+            hoprd_address: 0xabe9e59b681ab5a57438ba13b143370ef4e3bfdc
         - targets:
             - "65.109.161.241:3001"
           labels:
-            hostname: "production-7"
-            job: "production-7"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-7
+            node: production-7
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWJms9Ua9Fo7cbUbGyfpRG4UQKjQzXKpsi6m6W77qHTJg2
+            hoprd_address: 0xb0c8c9293c501237654ffdbe0d24ed26434875e9
         - targets:
             - "65.109.164.194:3001"
           labels:
-            hostname: "production-8"
-            job: "production-8"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-8
+            node: production-8
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWK6WAqxcqYwnyqSXCJHQxJ1R24d6sYwbKp43A9UskH9Du
+            hoprd_address: 0x57e9964b709ad126dc36cc6d1d2c877128ca1c61
         - targets:
             - "95.216.197.139:3001"
           labels:
-            hostname: "production-9"
-            job: "production-9"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-9
+            node: production-9
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWMqneeTM2fJYxMB8yyZbYnzgVSA9oje3HNoWjApoVRPRj
+            hoprd_address: 0xe6b8131b1d774a7d70b3784a5aaea27f1123be42
         - targets:
             - "65.108.52.164:3001"
           labels:
-            hostname: "production-10"
-            job: "production-10"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-10
+            node: production-10
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWRmgvfP3mLNLGuvhymPc41seneLomGXVQomRus7UdWwom
+            hoprd_address: 0xa1aa996869e2f5f76a31c8f6f044500e4feaa57b
         - targets:
             - "65.21.185.184:3001"
           labels:
-            hostname: "production-11"
-            job: "production-11"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-11
+            node: production-11
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWShrzRYYHfSWtxuWdeCfbVsCaSqHtRrZ3AE5ggNRUVz2M
+            hoprd_address: 0x3c8d05cb1641573c0c436cef2afa000ecb78384e
         - targets:
             - "65.108.210.70:3001"
           labels:
-            hostname: "production-12"
-            job: "production-12"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-12
+            node: production-12
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWPkHoRLPTgBt8SFSirXQCS2D35zuPp8cXrLDBDrzNNwZQ
+            hoprd_address: 0x4c4c6c135a3c6123235ff290447977df7af12c0
         - targets:
             - "95.216.210.22:3001"
           labels:
-            hostname: "production-13"
-            job: "production-13"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-13
+            node: production-13
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWGX2LfSJPpk9JcYxoPkEZrE4ggLCZCqjvfJbYyd2xjuEC
+            hoprd_address: 0x688e31178adbcda710e185edddceb0701fa37178
         - targets:
             - "65.109.175.196:3001"
           labels:
-            hostname: "production-14"
-            job: "production-14"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-14
+            node: production-14
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWQX59qx63rF42xrM9LHZk7LesMgAuidNm8sS8nY1nGt2F
+            hoprd_address: 0x4a46117d68bcf00171b94b9c864f9acf0a9d67a9
         - targets:
             - "135.181.81.142:3001"
           labels:
-            hostname: "production-15"
-            job: "production-15"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-15
+            node: production-15
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEtTiTo22rErHB46vkUmzWZedZHpZA1TVwb5zZHHkzvGR
+            hoprd_address: 0x8f08e270b3c163898eed4e08ed308000fad6d8c2
         - targets:
             - "65.21.245.19:3001"
           labels:
-            hostname: "production-16"
-            job: "production-16"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-16
+            node: production-16
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEtu5hqRHsDc1zxUQSYjcQh33AQNcKT4G52h6gLSChMhB
+            hoprd_address: 0x4ab504e3805780637ebb3f25e9b34e928d8e5383
         - targets:
             - "65.21.158.45:3001"
           labels:
-            hostname: "production-17"
-            job: "production-17"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-17
+            node: production-17
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWT3JRcWjJdGT7mKUzhjcEiHr3icazsnjLi3zvEaWmeGFT
+            hoprd_address: 0x263268d17c8f0edaae8948c65a8a0ddd33d497ff
         - targets:
             - "65.108.62.69:3001"
           labels:
-            hostname: "production-18"
-            job: "production-18"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-18
+            node: production-18
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMwHerbNjxdaBSYHmz9x6Pqcuy8e58DvRdqVzJgdzkHdz
+            hoprd_address: 0xadceb19f40ddc3e8450b44759288d0b61445bfc9
         - targets:
             - "95.216.170.194:3001"
           labels:
-            hostname: "production-19"
-            job: "production-19"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-19
+            node: production-19
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWRS6jYTNuVH8zFdoWpBjr197ct1kFkJDzEzLCQkRbtpsz
+            hoprd_address: 0x3a0aa960d9adbf5feb9347aba953fdc6da8de9a9
         - targets:
             - "65.109.128.17:3001"
           labels:
-            hostname: "production-20"
-            job: "production-20"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-20
+            node: production-20
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMCA7XtEb9MCFPM8p8j3nhyFMQZAV32dPbrybaMRyr3M5
+            hoprd_address: 0x6d4a527bde390cf5ca6cd694cabbe26b534ee861
         - targets:
             - "95.216.208.130:3001"
           labels:
-            hostname: "production-21"
-            job: "production-21"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-21
+            node: production-21
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWRQPPHw4mjPYRZsJsNT4bSJ4n7TKj8YryaygqvUjvyWLA
+            hoprd_address: 0x440cfaa1503680a15b14408e3b8f717d2a021a63
         - targets:
             - "95.216.163.105:3001"
           labels:
-            hostname: "production-22"
-            job: "production-22"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-22
+            node: production-22
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMTzJTsJmiqfFdYejXtnuxXN1FUD55V38j4fugS2hbU5A
+            hoprd_address: 0x58db70098a4ead32b06fc0388aa924feb7d18ccc
         - targets:
             - "65.109.227.57:3001"
           labels:
-            hostname: "production-23"
-            job: "production-23"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-23
+            node: production-23
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWNmaPFsmKWXh9WRY7uXhJRnU9MyxmUXL9YcDnVCM5i2xY
+            hoprd_address: 0xe19f3f16630c45fcc930f26c166fee50bc23b378
         - targets:
             - "37.27.20.245:3001"
           labels:
-            hostname: "production-24"
-            job: "production-24"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-24
+            node: production-24
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEoBqo1HtQ3bHjowX6UbhxWXdh3P1FbyFsSTUhawpooZa
+            hoprd_address: 0x5b52b59c7f10af6b65174642891a0c24d02b7e42
     - job_name: hetzner-staging-node-metrics
       static_configs:
         - targets:
             - "78.47.150.194:9100"
             - "78.47.150.194:9093"
           labels:
-            hostname: "hetzner-staging-alpha-1"
+            service: entry-node
             job: "hetzner-staging-alpha-1"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-1"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWNe4N2isa7V4T9YhBxuPCb8jAdQWMQXSHRsHAXBKgAENs
+            hoprd_address: 0xeced17c48f6b9cfe446132152ec08788e4b4279d
         - targets:
             - "91.107.194.8:9100"
             - "91.107.194.8:9093"
           labels:
-            hostname: "hetzner-staging-alpha-2"
+            service: entry-node
             job: "hetzner-staging-alpha-2"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-2"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWGzvwfnfiM8obDc1DKc6R1xU36ySnjc3UFiRCt1fsnBXo
+            hoprd_address: 0xe756a48e0f7c8631a00fdd6daca8fa9753bb1435
         - targets:
             - "49.12.246.83:9100"
             - "49.12.246.83:9093"
           labels:
-            hostname: "hetzner-staging-alpha-3"
+            service: entry-node
             job: "hetzner-staging-alpha-3"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-3"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWPp18qnLofr1NonMBH8uefHcpcVUoJb3BXbQ3vezC7krg
+            hoprd_address: 0xbd2b7b4d3f4654ac4c74380aa164ae2a9354f590
         - targets:
             - "159.69.122.70:9100"
             - "159.69.122.70:9093"
           labels:
-            hostname: "hetzner-staging-alpha-4"
+            service: entry-node
             job: "hetzner-staging-alpha-4"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-4"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWRQ1E9GGTZNpHDJyhpFbQ2mreCbgchoiEH2Ab67or7M3R
+            hoprd_address: 0xff00fd9d3a637edb9e79be38c928d4c047902778
         - targets:
             - "142.132.184.57:9100"
             - "142.132.184.57:9093"
           labels:
-            hostname: "hetzner-staging-alpha-5"
+            service: entry-node
             job: "hetzner-staging-alpha-5"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-5"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCMZAbZHhF16G4UaLx43Dmmbquxb9k2pEr5HPB3DiM8G7
+            hoprd_address: 0x3d725baabd667bfb038d57e06853a3fdefde3544
         - targets:
             - "128.140.52.34:9100"
             - "128.140.52.34:9093"
           labels:
-            hostname: "hetzner-staging-alpha-6"
+            service: entry-node
             job: "hetzner-staging-alpha-6"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-6"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWR59W4etXE6yBiNPiRM4XDUY2NDichMajVmxHrZwL8tZJ
+            hoprd_address: 0xf1829e6b819041be7d8f5c1d4aafadc7f1566e24
         - targets:
             - "116.203.251.244:9100"
             - "116.203.251.244:9093"
           labels:
-            hostname: "hetzner-staging-alpha-7"
+            service: entry-node
             job: "hetzner-staging-alpha-7"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-7"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWJSqDxGfpLhb5noYF5M8pG4pXRSZkszak3DN79nWsuZ2U
+            hoprd_address: 0x11b2acb1dd259368acca923f915c1b46a141d01b
         - targets:
             - "49.12.13.222:9100"
             - "49.12.13.222:9093"
           labels:
-            hostname: "hetzner-staging-alpha-8"
+            service: entry-node
             job: "hetzner-staging-alpha-8"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-8"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWAuKmJAyLrjS7ejtvEGyanmVzsVxHZMqjmyQmUhKsMavA
+            hoprd_address: 0xd37c45dd951b326148c9613a73c692a3a2144255
         - targets:
             - "49.13.13.52:9100"
             - "49.13.13.52:9093"
           labels:
-            hostname: "hetzner-staging-alpha-9"
+            service: entry-node
             job: "hetzner-staging-alpha-9"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-9"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWNsW2L3tjmYzXvYvRmk5iLZCu5P8giNBou2AcfPyJxQpy
+            hoprd_address: 0x732e39520f0674f290c0016105d03982977c1677
         - targets:
             - "49.13.13.55:9100"
             - "49.13.13.55:9093"
           labels:
-            hostname: "hetzner-staging-alpha-10"
+            service: entry-node
             job: "hetzner-staging-alpha-10"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-10"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCextLu2LF2sJ1rDAVR93krfHMSv6UqrnuLzJax98Hftv
+            hoprd_address: 0x5a724a41b722ac7c07c9c1fbe1645e478920dc3f
         - targets:
             - "91.107.205.15:9100"
             - "91.107.205.15:9093"
           labels:
-            hostname: "hetzner-staging-alpha-11"
+            service: exit-node
             job: "hetzner-staging-alpha-11"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-11"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWAsLqUwdAqYuaDNEqAwZToiGXa7PKF73RhNgAHKHnhndt
+            hoprd_address: 0xb26d8068c9a2412b6a3f4b765986037a1a815103
         - targets:
             - "49.13.13.104:9100"
             - "49.13.13.104:9093"
           labels:
-            hostname: "hetzner-staging-alpha-12"
+            service: exit-node
             job: "hetzner-staging-alpha-12"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-12"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWKBYQK36RfNDvWyxLJms4rPypckQBwEokraTNd6gacnaf
+            hoprd_address: 0xfd9894dd423fbdfcc18cddd416f4513e9624ee32
         - targets:
             - "49.13.13.114:9100"
             - "49.13.13.114:9093"
           labels:
-            hostname: "hetzner-staging-alpha-13"
+            service: exit-node
             job: "hetzner-staging-alpha-13"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-13"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWJ1m6KxHTNbkH24oo3mszuKxfPggYHRXSGTEGp42to3sd
+            hoprd_address: 0x3920892ef78e62fcc26c5ce1b598b045b97e3aaa
         - targets:
             - "49.13.13.117:9100"
             - "49.13.13.117:9093"
           labels:
-            hostname: "hetzner-staging-alpha-14"
+            service: exit-node
             job: "hetzner-staging-alpha-14"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-14"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWNq3AjDKgqyyQxHKD8MxBf8ikGvfhk8npWX2y5TvWA6cQ
+            hoprd_address: 0x88345f5341c0e27b3c7a8f7fe5d29b56f3e521d4
         - targets:
             - "49.13.13.106:9100"
             - "49.13.13.106:9093"
           labels:
-            hostname: "hetzner-staging-alpha-15"
+            service: exit-node
             job: "hetzner-staging-alpha-15"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-15"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWMf2Tw6beVpZYVwBgb6gzGDnQp8Fh1V9ZkisW2L92THNF
+            hoprd_address: 0x5e7ab9cbd3d9ab669aa1c593d6c3a172ffca9ec7
         - targets:
             - "95.217.234.91:9100"
             - "95.217.234.91:9093"
           labels:
-            hostname: "hetzner-staging-alpha-16"
+            service: exit-node
             job: "hetzner-staging-alpha-16"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-16"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBegPJotpGcV4tJXqRsASs5k3nzXvyxTcpoT97HeqsVLL
+            hoprd_address: 0x20c4d0e1610e41f3e9a81d55eb0c136a5f66c2d6
         - targets:
             - "65.21.54.172:9100"
             - "65.21.54.172:9093"
           labels:
-            hostname: "hetzner-staging-alpha-17"
+            service: exit-node
             job: "hetzner-staging-alpha-17"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-17"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBsGxZZJ4ae8qrDt5apzwRofC9ersbbjNMGzs7vysESPW
+            hoprd_address: 0x363a9488967ae3c38661ca627c402d3990ad084b
         - targets:
             - "135.181.156.126:9100"
             - "135.181.156.126:9093"
           labels:
-            hostname: "hetzner-staging-alpha-18"
+            service: exit-node
             job: "hetzner-staging-alpha-18"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-18"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWAkQAoZcxpGGzdDUc37EtuoNsWx4gegEwTdG39Q5BFnaB
+            hoprd_address: 0xad30a4ec22a7d2771dec712295d1c66dcaa338f7
         - targets:
             - "135.181.87.129:9100"
             - "135.181.87.129:9093"
           labels:
-            hostname: "hetzner-staging-alpha-19"
+            service: exit-node
             job: "hetzner-staging-alpha-19"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-19"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWA7ifmGt4oK1qXmPLqPJK77AYk7Nw5pSAsBtz1FKtRjnT
+            hoprd_address: 0x906d27952f5dfdeaa562e429d08013968eea681e
         - targets:
             - "135.181.207.234:9100"
             - "135.181.207.234:9093"
           labels:
-            hostname: "hetzner-staging-alpha-20"
+            service: exit-node
             job: "hetzner-staging-alpha-20"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-20"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWJ5fZzhVmpVVx4CCmKMd5zEPJmMoWLWQQbS42AF3o7oW9
+            hoprd_address: 0xd560ea27d40302a667d7872a79e650f4f5e47926
         - targets:
             - "37.27.7.199:9100"
             - "37.27.7.199:9093"
           labels:
-            hostname: "hetzner-staging-alpha-21"
+            service: exit-node
             job: "hetzner-staging-alpha-21"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-21"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWBQLneNzeGBHpu6yUCo7YrK3UV7iTfqzPhu7MU5wncJtS
+            hoprd_address: 0x840d0fbaa1d92cabc2e810355f69b8b900658646
         - targets:
             - "135.181.101.184:9100"
             - "135.181.101.184:9093"
           labels:
-            hostname: "hetzner-staging-alpha-22"
+            service: exit-node
             job: "hetzner-staging-alpha-22"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-22"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWDu7CWqYebNB8kNrCJKyp9xacpw4Ab39bc4PnbymSQG5f
+            hoprd_address: 0x78d294676bbd9030c6ff83899d4d42723a5ff71f
         - targets:
             - "95.217.133.151:9100"
             - "95.217.133.151:9093"
           labels:
-            hostname: "hetzner-staging-alpha-23"
+            service: exit-node
             job: "hetzner-staging-alpha-23"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-23"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWQEtGq8DbK6LVLN9UFfYjsxyWAYecEA71x9mf8AU295K9
+            hoprd_address: 0x0de9a4482f6fea7c83d099cbf0e339207c0dd386
         - targets:
             - "95.217.161.46:9100"
             - "95.217.161.46:9093"
           labels:
-            hostname: "hetzner-staging-alpha-24"
+            service: exit-node
             job: "hetzner-staging-alpha-24"
-            hoprd_network: monte_rosa
+            node: "hetzner-staging-alpha-24"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWMHHVdet5Yi7cJwMjHwsrPyXAWTnWGk9vpep6zx5jLSJ3
+            hoprd_address: 0xe57f5e26ccd25aed862d03956d169e4af5b587e4
         - targets:
             - "37.27.18.179:9100"
             - "37.27.18.179:9093"
           labels:
-            hostname: "hetzner-staging-alpha-25"
+            service: exit-node
             job: "hetzner-staging-alpha-25"
-            hoprd_network: monte_rosa
-    - job_name: production-node-metrics
+            node: "hetzner-staging-alpha-25"
+            hoprd_device_type: hetzner
+            hoprd_network: rotsee
+            hoprd_category: "staging"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWD2fDM2t6bs7GpPjvbDETsKo3g5VCDvCdhrTjJsM95gsL
+            hoprd_address: 0x0ff99382b671eb888bf7fd9f5c2bc7e2b2260c07
+    - job_name: hetzner-production-node-metrics
       static_configs:
         - targets:
             - "95.217.237.141:9100"
             - "95.217.237.141:9093"
           labels:
-            hostname: "production-0"
-            job: "production-0"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-0
+            node: production-0
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWL9LzhMKX9sAFqUPytHGUyUyr3mZgDCCHYqRu6kRqC1f9
+            hoprd_address: 0x4c3af075e46a143e0829991e6acc84629173e503
         - targets:
             - "135.181.92.114:9100"
             - "135.181.92.114:9093"
           labels:
-            hostname: "production-1"
-            job: "production-1"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-1
+            node: production-1
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWSGvn7VGFe2T5xzbr6g7KHFYieNgGK54nTQb5jhe65dQE
+            hoprd_address: 0x289a1f807105f4c463f92c5b3b89d091b37d4905
         - targets:
             - "135.181.80.245:9100"
             - "135.181.80.245:9093"
           labels:
-            hostname: "production-2"
-            job: "production-2"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-2
+            node: production-2
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWQUbohvkJPseZGjXUQATXAMpNfx9SjC7e9jNRx5k7EzXJ
+            hoprd_address: 0x2211494cc3086b9f4f2e30dbbdab9ab9349c8793
         - targets:
             - "135.181.107.160:9100"
             - "135.181.107.160:9093"
           labels:
-            hostname: "production-3"
-            job: "production-3"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-3
+            node: production-3
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWKw5BnTpPMk82qbkRcLiJCrwdZYTiWquP4Tej9W93df8D
+            hoprd_address: 0xd3c824660a782411d455fbe821ec788f0c271fe2
         - targets:
             - "135.181.82.212:9100"
             - "135.181.82.212:9093"
           labels:
-            hostname: "production-4"
-            job: "production-4"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-4
+            node: production-4
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWHCL9d8CrAhjLNLWqjHGK4PGzPmEAj81Pmsc9bz6uiaJz
+            hoprd_address: 0x70ccc45fc99891ee21f8c10a9632c37f133607a5
         - targets:
             - "95.217.215.176:9100"
             - "95.217.215.176:9093"
           labels:
-            hostname: "production-5"
-            job: "production-5"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-5
+            node: production-5
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWCw9aUj9dm44hdxGTh9Vp74sCMvnTradkG932Qt5fcK9W
+            hoprd_address: 0xbe70ec1397ba69fee4f152038d9dd42acaa60691
         - targets:
             - "65.108.216.137:9100"
             - "65.108.216.137:9093"
           labels:
-            hostname: "production-6"
-            job: "production-6"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-6
+            node: production-6
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWDfRepVqhth71M6UXaPzSmaSDha3pQEGrDA1CXr3cw8qa
+            hoprd_address: 0xabe9e59b681ab5a57438ba13b143370ef4e3bfdc
         - targets:
             - "65.109.161.241:9100"
             - "65.109.161.241:9093"
           labels:
-            hostname: "production-7"
-            job: "production-7"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-7
+            node: production-7
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWJms9Ua9Fo7cbUbGyfpRG4UQKjQzXKpsi6m6W77qHTJg2
+            hoprd_address: 0xb0c8c9293c501237654ffdbe0d24ed26434875e9
         - targets:
             - "65.109.164.194:9100"
             - "65.109.164.194:9093"
           labels:
-            hostname: "production-8"
-            job: "production-8"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-8
+            node: production-8
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWK6WAqxcqYwnyqSXCJHQxJ1R24d6sYwbKp43A9UskH9Du
+            hoprd_address: 0x57e9964b709ad126dc36cc6d1d2c877128ca1c61
         - targets:
             - "95.216.197.139:9100"
             - "95.216.197.139:9093"
           labels:
-            hostname: "production-9"
-            job: "production-9"
-            hoprd_network: monte_rosa
+            service: entry-node
+            job: production-9
+            node: production-9
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "entry-node"
+            hoprd_peer_id: 12D3KooWMqneeTM2fJYxMB8yyZbYnzgVSA9oje3HNoWjApoVRPRj
+            hoprd_address: 0xe6b8131b1d774a7d70b3784a5aaea27f1123be42
         - targets:
             - "65.108.52.164:9100"
             - "65.108.52.164:9093"
           labels:
-            hostname: "production-10"
-            job: "production-10"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-10
+            node: production-10
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWRmgvfP3mLNLGuvhymPc41seneLomGXVQomRus7UdWwom
+            hoprd_address: 0xa1aa996869e2f5f76a31c8f6f044500e4feaa57b
         - targets:
             - "65.21.185.184:9100"
             - "65.21.185.184:9093"
           labels:
-            hostname: "production-11"
-            job: "production-11"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-11
+            node: production-11
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWShrzRYYHfSWtxuWdeCfbVsCaSqHtRrZ3AE5ggNRUVz2M
+            hoprd_address: 0x3c8d05cb1641573c0c436cef2afa000ecb78384e
         - targets:
             - "65.108.210.70:9100"
             - "65.108.210.70:9093"
           labels:
-            hostname: "production-12"
-            job: "production-12"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-12
+            node: production-12
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWPkHoRLPTgBt8SFSirXQCS2D35zuPp8cXrLDBDrzNNwZQ
+            hoprd_address: 0x4c4c6c135a3c6123235ff290447977df7af12c0
         - targets:
             - "95.216.210.22:9100"
             - "95.216.210.22:9093"
           labels:
-            hostname: "production-13"
-            job: "production-13"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-13
+            node: production-13
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: "exit-node"
+            hoprd_peer_id: 12D3KooWGX2LfSJPpk9JcYxoPkEZrE4ggLCZCqjvfJbYyd2xjuEC
+            hoprd_address: 0x688e31178adbcda710e185edddceb0701fa37178
         - targets:
             - "65.109.175.196:9100"
             - "65.109.175.196:9093"
           labels:
-            hostname: "production-14"
-            job: "production-14"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-14
+            node: production-14
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWQX59qx63rF42xrM9LHZk7LesMgAuidNm8sS8nY1nGt2F
+            hoprd_address: 0x4a46117d68bcf00171b94b9c864f9acf0a9d67a9
         - targets:
             - "135.181.81.142:9100"
             - "135.181.81.142:9093"
           labels:
-            hostname: "production-15"
-            job: "production-15"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-15
+            node: production-15
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEtTiTo22rErHB46vkUmzWZedZHpZA1TVwb5zZHHkzvGR
+            hoprd_address: 0x8f08e270b3c163898eed4e08ed308000fad6d8c2
         - targets:
             - "65.21.245.19:9100"
             - "65.21.245.19:9093"
           labels:
-            hostname: "production-16"
-            job: "production-16"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-16
+            node: production-16
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEtu5hqRHsDc1zxUQSYjcQh33AQNcKT4G52h6gLSChMhB
+            hoprd_address: 0x4ab504e3805780637ebb3f25e9b34e928d8e5383
         - targets:
             - "65.21.158.45:9100"
             - "65.21.158.45:9093"
           labels:
-            hostname: "production-17"
-            job: "production-17"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-17
+            node: production-17
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWT3JRcWjJdGT7mKUzhjcEiHr3icazsnjLi3zvEaWmeGFT
+            hoprd_address: 0x263268d17c8f0edaae8948c65a8a0ddd33d497ff
         - targets:
             - "65.108.62.69:9100"
             - "65.108.62.69:9093"
           labels:
-            hostname: "production-18"
-            job: "production-18"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-18
+            node: production-18
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMwHerbNjxdaBSYHmz9x6Pqcuy8e58DvRdqVzJgdzkHdz
+            hoprd_address: 0xadceb19f40ddc3e8450b44759288d0b61445bfc9
         - targets:
             - "95.216.170.194:9100"
             - "95.216.170.194:9093"
           labels:
-            hostname: "production-19"
-            job: "production-19"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-19
+            node: production-19
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWRS6jYTNuVH8zFdoWpBjr197ct1kFkJDzEzLCQkRbtpsz
+            hoprd_address: 0x3a0aa960d9adbf5feb9347aba953fdc6da8de9a9
         - targets:
             - "65.109.128.17:9100"
             - "65.109.128.17:9093"
           labels:
-            hostname: "production-20"
-            job: "production-20"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-20
+            node: production-20
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMCA7XtEb9MCFPM8p8j3nhyFMQZAV32dPbrybaMRyr3M5
+            hoprd_address: 0x6d4a527bde390cf5ca6cd694cabbe26b534ee861
         - targets:
             - "95.216.208.130:9100"
             - "95.216.208.130:9093"
           labels:
-            hostname: "production-21"
-            job: "production-21"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-21
+            node: production-21
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWRQPPHw4mjPYRZsJsNT4bSJ4n7TKj8YryaygqvUjvyWLA
+            hoprd_address: 0x440cfaa1503680a15b14408e3b8f717d2a021a63
         - targets:
             - "95.216.163.105:9100"
             - "95.216.163.105:9093"
           labels:
-            hostname: "production-22"
-            job: "production-22"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-22
+            node: production-22
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWMTzJTsJmiqfFdYejXtnuxXN1FUD55V38j4fugS2hbU5A
+            hoprd_address: 0x58db70098a4ead32b06fc0388aa924feb7d18ccc
         - targets:
             - "65.109.227.57:9100"
             - "65.109.227.57:9093"
           labels:
-            hostname: "production-23"
-            job: "production-23"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-23
+            node: production-23
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWNmaPFsmKWXh9WRY7uXhJRnU9MyxmUXL9YcDnVCM5i2xY
+            hoprd_address: 0xe19f3f16630c45fcc930f26c166fee50bc23b378
         - targets:
             - "37.27.20.245:9100"
             - "37.27.20.245:9093"
           labels:
-            hostname: "production-24"
-            job: "production-24"
-            hoprd_network: monte_rosa
+            service: exit-node
+            job: production-24
+            node: production-24
+            hoprd_device_type: hetzner
+            hoprd_network: dufour
+            hoprd_category: "production"
+            hoprd_node_type: exit-node
+            hoprd_peer_id: 12D3KooWEoBqo1HtQ3bHjowX6UbhxWXdh3P1FbyFsSTUhawpooZa
+            hoprd_address: 0x5b52b59c7f10af6b65174642891a0c24d02b7e42
