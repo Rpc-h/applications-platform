@@ -40,19 +40,6 @@ data:
       "liveNow": false,
       "panels": [
         {
-          "collapsed": false,
-          "gridPos": {
-            "h": 1,
-            "w": 24,
-            "x": 0,
-            "y": 0
-          },
-          "id": 24,
-          "panels": [],
-          "title": "Latencies",
-          "type": "row"
-        },
-        {
           "datasource": {
             "type": "prometheus",
             "uid": "prometheus"
@@ -93,9 +80,9 @@ data:
           },
           "gridPos": {
             "h": 8,
-            "w": 6,
+            "w": 4,
             "x": 0,
-            "y": 1
+            "y": 0
           },
           "id": 31,
           "links": [
@@ -139,6 +126,106 @@ data:
           ],
           "title": "Rpc Server Latency Health",
           "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "${postgres}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "max": 150,
+              "min": 0,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-red",
+                    "value": null
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 100
+                  },
+                  {
+                    "color": "green",
+                    "value": 150
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 5,
+            "x": 4,
+            "y": 0
+          },
+          "id": 35,
+          "links": [
+            {
+              "targetBlank": true,
+              "title": "Routes",
+              "url": "https://grafana.rpch.tech/d/muB3F4s4z/rpch-nodes-overview?orgId=1&${postgres:queryparam}"
+            }
+          ],
+          "options": {
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "showThresholdLabels": false,
+            "showThresholdMarkers": true
+          },
+          "pluginVersion": "10.1.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "postgres",
+                "uid": "${postgres}"
+              },
+              "editorMode": "builder",
+              "format": "table",
+              "rawSql": "SELECT COUNT(entry_id) FROM zero_hop_pairings LIMIT 50 ",
+              "refId": "A",
+              "sql": {
+                "columns": [
+                  {
+                    "name": "COUNT",
+                    "parameters": [
+                      {
+                        "name": "entry_id",
+                        "type": "functionParameter"
+                      }
+                    ],
+                    "type": "function"
+                  }
+                ],
+                "groupBy": [
+                  {
+                    "property": {
+                      "type": "string"
+                    },
+                    "type": "groupBy"
+                  }
+                ],
+                "limit": 50
+              },
+              "table": "zero_hop_pairings"
+            }
+          ],
+          "title": "Nº routes",
+          "type": "gauge"
         },
         {
           "datasource": {
@@ -209,9 +296,9 @@ data:
           },
           "gridPos": {
             "h": 8,
-            "w": 18,
-            "x": 6,
-            "y": 1
+            "w": 15,
+            "x": 9,
+            "y": 0
           },
           "id": 6,
           "options": {
@@ -274,60 +361,79 @@ data:
             "type": "postgres",
             "uid": "${postgres}"
           },
+          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
                 "mode": "thresholds"
               },
+              "custom": {
+                "align": "auto",
+                "cellOptions": {
+                  "type": "auto"
+                },
+                "inspect": false
+              },
               "mappings": [],
-              "max": 150,
-              "min": 0,
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-red",
+                    "color": "green",
                     "value": null
                   },
                   {
-                    "color": "#EAB839",
-                    "value": 100
-                  },
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "code"
+                },
+                "properties": [
                   {
-                    "color": "green",
-                    "value": 150
+                    "id": "displayName",
+                    "value": "Code"
                   }
                 ]
               },
-              "unit": "none"
-            },
-            "overrides": []
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "promotioncode"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Usages"
+                  }
+                ]
+              }
+            ]
           },
           "gridPos": {
             "h": 8,
             "w": 6,
             "x": 0,
-            "y": 9
+            "y": 8
           },
-          "id": 35,
-          "links": [
-            {
-              "targetBlank": true,
-              "title": "Routes",
-              "url": "https://grafana.rpch.tech/d/muB3F4s4z/rpch-nodes-overview?orgId=1&${postgres:queryparam}"
-            }
-          ],
+          "id": 40,
           "options": {
-            "orientation": "auto",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
+            "cellHeight": "sm",
+            "footer": {
+              "countRows": false,
               "fields": "",
-              "values": false
+              "reducer": [
+                "sum"
+              ],
+              "show": false
             },
-            "showThresholdLabels": false,
-            "showThresholdMarkers": true
+            "showHeader": true
           },
           "pluginVersion": "10.1.2",
           "targets": [
@@ -336,20 +442,15 @@ data:
                 "type": "postgres",
                 "uid": "${postgres}"
               },
-              "editorMode": "builder",
+              "editorMode": "code",
               "format": "table",
-              "rawSql": "SELECT COUNT(entry_id) FROM zero_hop_pairings LIMIT 50 ",
+              "rawQuery": true,
+              "rawSql": "SELECT v.code, count(rv.voucher_id ) as PromotionCode\nFROM redeemed_vouchers as rv \nLEFT JOIN vouchers as v ON (rv.voucher_id = v.id)\nGROUP BY v.code\nORDER by 2 desc",
               "refId": "A",
               "sql": {
                 "columns": [
                   {
-                    "name": "COUNT",
-                    "parameters": [
-                      {
-                        "name": "entry_id",
-                        "type": "functionParameter"
-                      }
-                    ],
+                    "parameters": [],
                     "type": "function"
                   }
                 ],
@@ -362,12 +463,11 @@ data:
                   }
                 ],
                 "limit": 50
-              },
-              "table": "zero_hop_pairings"
+              }
             }
           ],
-          "title": "Nº routes",
-          "type": "gauge"
+          "title": "Promotion Codes",
+          "type": "table"
         },
         {
           "datasource": {
@@ -431,7 +531,7 @@ data:
             "h": 8,
             "w": 18,
             "x": 6,
-            "y": 9
+            "y": 8
           },
           "id": 36,
           "options": {
@@ -571,7 +671,7 @@ data:
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 17
+            "y": 16
           },
           "id": 37,
           "options": {
@@ -682,7 +782,7 @@ data:
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 26
+            "y": 25
           },
           "id": 38,
           "options": {
@@ -792,7 +892,7 @@ data:
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 34
+            "y": 33
           },
           "id": 39,
           "options": {
@@ -880,8 +980,8 @@ data:
           {
             "current": {
               "selected": true,
-              "text": "Postgres - Staging",
-              "value": "PF951AEA0F4DBBB20"
+              "text": "Postgres - Production",
+              "value": "PAC20BE1BB66B3ECB"
             },
             "hide": 0,
             "includeAll": false,
