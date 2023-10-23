@@ -80,7 +80,7 @@ data:
           },
           "gridPos": {
             "h": 8,
-            "w": 4,
+            "w": 5,
             "x": 0,
             "y": 0
           },
@@ -164,7 +164,7 @@ data:
           "gridPos": {
             "h": 8,
             "w": 5,
-            "x": 4,
+            "x": 5,
             "y": 0
           },
           "id": 35,
@@ -296,8 +296,8 @@ data:
           },
           "gridPos": {
             "h": 8,
-            "w": 15,
-            "x": 9,
+            "w": 14,
+            "x": 10,
             "y": 0
           },
           "id": 6,
@@ -399,6 +399,10 @@ data:
                   {
                     "id": "displayName",
                     "value": "Code"
+                  },
+                  {
+                    "id": "custom.minWidth",
+                    "value": 125
                   }
                 ]
               },
@@ -418,7 +422,7 @@ data:
           },
           "gridPos": {
             "h": 8,
-            "w": 6,
+            "w": 5,
             "x": 0,
             "y": 8
           },
@@ -466,7 +470,7 @@ data:
               }
             }
           ],
-          "title": "Promotion Codes",
+          "title": "Total Promotion Codes used",
           "type": "table"
         },
         {
@@ -495,13 +499,16 @@ data:
                 },
                 "insertNulls": false,
                 "lineInterpolation": "linear",
+                "lineStyle": {
+                  "fill": "solid"
+                },
                 "lineWidth": 1,
                 "pointSize": 5,
                 "scaleDistribution": {
                   "type": "linear"
                 },
                 "showPoints": "auto",
-                "spanNulls": false,
+                "spanNulls": true,
                 "stacking": {
                   "group": "A",
                   "mode": "none"
@@ -517,20 +524,41 @@ data:
                   {
                     "color": "green",
                     "value": null
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
                   }
                 ]
               }
             },
-            "overrides": []
+            "overrides": [
+              {
+                "__systemRef": "hideSeriesFrom",
+                "matcher": {
+                  "id": "byNames",
+                  "options": {
+                    "mode": "exclude",
+                    "names": [
+                      "count HOPRINTERNAL"
+                    ],
+                    "prefix": "All except:",
+                    "readOnly": true
+                  }
+                },
+                "properties": [
+                  {
+                    "id": "custom.hideFrom",
+                    "value": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    }
+                  }
+                ]
+              }
+            ]
           },
           "gridPos": {
             "h": 8,
-            "w": 18,
-            "x": 6,
+            "w": 19,
+            "x": 5,
             "y": 8
           },
           "id": 36,
@@ -556,7 +584,7 @@ data:
               "editorMode": "code",
               "format": "time_series",
               "rawQuery": true,
-              "rawSql": "SELECT DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)) as time, v.code, count(rv.voucher_id ) as PromotionCode\nFROM redeemed_vouchers as rv \nLEFT JOIN vouchers as v ON (rv.voucher_id = v.id)\nWHERE rv.\"createdAt\" > $__timeFrom() AND rv.\"createdAt\" < $__timeTo() \nGROUP BY DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)), v.code\nORDER BY 1",
+              "rawSql": "\nwith data as \n(SELECT DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)) as time,\n  v.code,\n  count(rv.voucher_id ) as PromotionCode\nFROM redeemed_vouchers as rv \nLEFT JOIN vouchers as v ON (rv.voucher_id = v.id)\nWHERE rv.\"createdAt\" > $__timeFrom() AND rv.\"createdAt\" < $__timeTo() \nGROUP BY DATE_TRUNC('minute',(DATE_TRUNC('hour', rv.\"createdAt\") + ((((extract(minute FROM DATE_TRUNC('minute', rv.\"createdAt\"))::int/15)::int)*15)::text||' minute')::INTERVAL)), v.code\nORDER BY 1)\n\nSELECT time, code, sum(PromotionCode) OVER (PARTITION BY code ORDER BY time) as PromotionCode\nfrom data\nORDER BY time, code",
               "refId": "A",
               "sql": {
                 "columns": [
@@ -606,7 +634,7 @@ data:
               "table": "redeemed_vouchers"
             }
           ],
-          "title": "Promotion Codes Used",
+          "title": "Promotion codes used over the period",
           "type": "timeseries"
         },
         {
@@ -979,7 +1007,7 @@ data:
         "list": [
           {
             "current": {
-              "selected": true,
+              "selected": false,
               "text": "Postgres - Production",
               "value": "PAC20BE1BB66B3ECB"
             },
@@ -1025,7 +1053,7 @@ data:
         ]
       },
       "time": {
-        "from": "now-6h",
+        "from": "now-2d",
         "to": "now"
       },
       "timepicker": {},
