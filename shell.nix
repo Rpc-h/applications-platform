@@ -17,6 +17,7 @@ mkShell {
     kubectl
     kubeseal
     kubetail
+    k9s
 
     # custom pkg groups
     linuxPkgs
